@@ -4,13 +4,13 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "lastSyncTime": 1792903117269,
-            "isModifiedExternally": false,
+            "isModifiedExternally": true,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\篝火场景.json",
             "savedViewport": {
-                "x": -21,
-                "y": 164,
-                "zoom": 0.32
+                "x": -901,
+                "y": 323,
+                "zoom": 0.74
             },
             "filename": "篝火场景",
             "version": "v2.1.0"
@@ -359,6 +359,7 @@
                 ]
             }
         },
+        "pre_delay": 1200,
         "action": {
             "type": "Click",
             "param": {
