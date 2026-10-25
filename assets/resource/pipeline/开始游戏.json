@@ -1,0 +1,232 @@
+{
+    "$__mpe_config_开始游戏": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1792927602847,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\开始游戏.json",
+            "savedViewport": {
+                "x": 503,
+                "y": 537,
+                "zoom": 0.65
+            },
+            "filename": "开始游戏",
+            "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_宝石收集者_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1794,
+                "y": -101
+            }
+        }
+    },
+    "$__mpe_external_离开地点_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1793,
+                "y": -29
+            }
+        }
+    },
+    "===开始===": {
+        "next": [
+            "启动游戏",
+            "返回公告",
+            "进入游戏",
+            "启动祭坛",
+            "滑动难度"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -724,
+                "y": -716
+            }
+        }
+    },
+    "启动游戏": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "hzsj.png"
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 80000,
+        "rate_limit": 3000,
+        "next": [
+            "返回公告",
+            "进入游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -45,
+                "y": -249
+            }
+        }
+    },
+    "启动祭坛": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    677,
+                    427,
+                    244,
+                    152
+                ],
+                "template": "启动祭坛.png"
+            }
+        },
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    773,
+                    481,
+                    62,
+                    38
+                ]
+            }
+        },
+        "rate_limit": 3000,
+        "next": [
+            "滑动难度"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 792,
+                "y": -174
+            }
+        }
+    },
+    "坠入深境": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    551,
+                    310,
+                    184,
+                    51
+                ],
+                "template": [
+                    "坠入深境.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    625,
+                    319,
+                    36,
+                    40
+                ]
+            }
+        },
+        "repeat": 2,
+        "post_delay": 6000,
+        "timeout": -1,
+        "focus": "进入副本",
+        "next": [
+            "宝石收集者",
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1482,
+                "y": -134
+            }
+        }
+    },
+    "滑动难度": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1000,
+                    500,
+                    10,
+                    10
+                ],
+                "end": [
+                    [
+                        100,
+                        500,
+                        10,
+                        10
+                    ]
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 1000,
+        "next": [
+            "坠入深境"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1078,
+                "y": -149
+            }
+        }
+    },
+    "返回公告": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "返回.png"
+            }
+        },
+        "pre_delay": 2000,
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 1,
+        "repeat_delay": 1000,
+        "timeout": 3000,
+        "next": [
+            "返回公告"
+        ],
+        "on_error": [
+            "进入游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -194,
+                "y": 144
+            }
+        }
+    },
+    "进入游戏": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "进入游戏.png"
+            }
+        },
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 4,
+        "repeat_delay": 1000,
+        "next": [
+            "启动祭坛"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 365,
+                "y": 58
+            }
+        }
+    }
+}

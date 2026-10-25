@@ -1,0 +1,190 @@
+{
+    "$__mpe_config_结算逻辑": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1792936615427,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\结算逻辑.json",
+            "savedViewport": {
+                "x": -2084,
+                "y": 179,
+                "zoom": 0.86
+            },
+            "filename": "结算逻辑",
+            "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_启动祭坛_结算逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4379,
+                "y": 378
+            }
+        }
+    },
+    "失败": {
+        "next": [
+            "终结",
+            "留下遗物",
+            "继续",
+            "点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2650,
+                "y": -60
+            }
+        }
+    },
+    "点击空白关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    474,
+                    639,
+                    339,
+                    75
+                ],
+                "template": [
+                    "结算逻辑/点击空白关闭.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 3,
+        "repeat_delay": 400,
+        "post_delay": 1000,
+        "timeout": -1,
+        "next": [
+            "结束探索",
+            "点击空白关闭",
+            "启动祭坛"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3674,
+                "y": 328
+            }
+        }
+    },
+    "留下遗物": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    354,
+                    557,
+                    241,
+                    70
+                ],
+                "template": [
+                    "结算逻辑/遗物.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "next": [
+            "继续",
+            "点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3083,
+                "y": 301
+            }
+        }
+    },
+    "终结": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "结算逻辑/终结.png",
+                    "死亡截图.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 3,
+        "repeat_delay": 300,
+        "next": [
+            "留下遗物",
+            "继续"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2607,
+                "y": 303
+            }
+        }
+    },
+    "结束探索": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1020,
+                    34,
+                    241,
+                    79
+                ],
+                "template": [
+                    "结算逻辑/结束探索.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "timeout": -1,
+        "next": [
+            "启动祭坛",
+            "点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4100,
+                "y": 217
+            }
+        }
+    },
+    "继续": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    996,
+                    29,
+                    268,
+                    73
+                ],
+                "template": [
+                    "结算逻辑/继续.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3401,
+                "y": 499
+            }
+        }
+    }
+}

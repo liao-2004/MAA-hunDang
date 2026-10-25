@@ -1,0 +1,193 @@
+{
+    "$__mpe_config_锻造间逻辑": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1792946293254,
+            "isModifiedExternally": true,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\锻造间逻辑.json",
+            "savedViewport": {
+                "x": -5569,
+                "y": -2223,
+                "zoom": 0.99
+            },
+            "filename": "锻造间逻辑",
+            "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_离开地点_锻造间逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6232,
+                "y": 3556
+            }
+        }
+    },
+    "卡牌升变": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    250,
+                    584,
+                    282,
+                    46
+                ]
+            }
+        },
+        "timeout": 3000,
+        "next": [
+            "是否升变"
+        ],
+        "on_error": [
+            "返回锻造间大厅"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6367,
+                "y": 2820
+            }
+        }
+    },
+    "形态升变": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    74,
+                    485,
+                    333,
+                    136
+                ],
+                "template": [
+                    "可形态升变图.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 3000,
+        "next": [
+            "识别卡牌"
+        ],
+        "on_error": [
+            "返回锻造间大厅"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5561,
+                "y": 2911
+            }
+        }
+    },
+    "是否升变": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    287,
+                    495,
+                    227,
+                    135
+                ],
+                "template": [
+                    "已升变标志.png"
+                ]
+            }
+        },
+        "timeout": 6000,
+        "next": [
+            "识别卡牌"
+        ],
+        "on_error": [
+            "返回锻造间大厅"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6086,
+                "y": 2355
+            }
+        }
+    },
+    "识别卡牌": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    753,
+                    108,
+                    506,
+                    527
+                ],
+                "template": [
+                    "形态升变-斧子.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 3500,
+        "next": [
+            "卡牌升变"
+        ],
+        "on_error": [
+            "返回锻造间大厅"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5926,
+                "y": 2809
+            }
+        }
+    },
+    "返回锻造间大厅": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    66,
+                    35,
+                    48,
+                    33
+                ]
+            }
+        },
+        "next": [
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6370,
+                "y": 3159
+            }
+        }
+    },
+    "锻造场景": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    27,
+                    35,
+                    285,
+                    144
+                ],
+                "template": [
+                    "锻造间.png"
+                ]
+            }
+        },
+        "next": [
+            "形态升变"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5202,
+                "y": 3026
+            }
+        }
+    }
+}

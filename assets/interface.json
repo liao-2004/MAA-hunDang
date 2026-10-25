@@ -4,14 +4,13 @@
     // 文档：https://maafw.xyz/docs/3.3-ProjectInterfaceV2
     // 示例：https://github.com/MaaXYZ/MaaFramework/blob/main/sample/interface.json
     "interface_version": 2,
-    "name": "MaaXXX",
-    "description": "这是一个使用 MaaFramework 创建的新项目。",
+    "name": "Maa-hzsj",
     "contact": "QQ群: 123456789",
     "license": "MIT",
     "welcome": "首次使用！欢迎使用 MAA!",
     // 填写项目地址和版本号可实现自动更新功能
     "github": "https://github.com/MaaXYZ/MaaPracticeBoilerplate",
-    "version": "1.0.0",
+    "version": "1.0.1",
     // Mirror酱为第三方分发服务，新项目默认关闭
     // 若有需要请联系 Mirror酱 开通，直接自行开启是无法使用的
     // "mirrorchyan_rid": "MaaXXX",
@@ -22,32 +21,12 @@
             "type": "Adb",
             "display_short_side": 720 // 默认缩放分辨率的短边长度
         },
-        {
-            "name": "桌面端",
-            "type": "Win32",
-            "win32": {
-                "class_regex": ".*",
-                "window_regex": "Visual Studio",
-                // 截图及控制方式，请根据项目实际情况修改
-                // 文档: https://maafw.xyz/docs/2.4-ControlMethods
-                "screencap": "PrintWindow", // 截图方式
-                "mouse": "PostMessageWithCursorPos", // 鼠标控制方式
-                "keyboard": "PostMessageWithCursorPos" // 键盘控制方式
-            }
-        }
     ],
     "resource": [
         {
             "name": "官服",
             "path": [
                 "./resource"
-            ]
-        },
-        {
-            "name": "B 服",
-            "path": [
-                "./resource"
-                // "./resource_bilibili"
             ]
         }
     ],
@@ -60,50 +39,69 @@
     // },
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "==开始游戏==",
+            "entry": "===开始===",
+            "controller": [],
+            "resource": []
         },
         {
-            "name": "选项任务",
-            "entry": "MyTask2",
-            "option": [
-                "任务选项1"
-            ]
+            "name": "==每日爬塔==",
+            "entry": "===开始==="
         },
         {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "pipeline_override": {}
+            "name": "==战斗内==",
+            "entry": "战斗场景",
+            "controller": [],
+            "resource": []
         },
         {
-            "name": "自定义识别与动作示例",
-            "entry": "FindSmallestNumber"
+            "name": "==地图内==",
+            "entry": "地图场景",
+            "controller": [],
+            "resource": []
         }
+        // {
+        //     "name": "选项任务",
+        //     "entry": "MyTask2",
+        //     "option": [
+        //         "任务选项1"
+        //     ]
+        // },
+        // {
+        //     "name": "参数任务",
+        //     "entry": "MyTask3",
+        //     "option": [
+        //         "任务选项1"
+        //     ],
+        //     "pipeline_override": {}
+        // },
+        // {
+        //     "name": "带Custom的任务",
+        //     "entry": "MyTask4"
+        // }
     ],
-    "option": {
-        "任务选项1": {
-            "type": "select",
-            "cases": [
-                {
-                    "name": "文本1",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
-                        }
-                    }
-                }
-            ]
-        }
-    }
+    "label": "深境",
+    // "option": {
+    //     "任务选项1": {
+    //         "type": "select",
+    //         "cases": [
+    //             {
+    //                 "name": "文本1",
+    //                 "pipeline_override": {
+    //                     "OcrTask": {
+    //                         "text": "文本1"
+    //                     }
+    //                 }
+    //             },
+    //             {
+    //                 "name": "文本2",
+    //                 "pipeline_override": {
+    //                     "OcrTask": {
+    //                         "text": "文本2"
+    //                     }
+    //                 }
+    //             }
+    //         ]
+    //     }
+    // }
 }

@@ -1,0 +1,104 @@
+{
+    "$__mpe_config_未知事件": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1792936793257,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\未知事件.json",
+            "savedViewport": {
+                "x": -64,
+                "y": 236,
+                "zoom": 0.86
+            },
+            "filename": "未知事件",
+            "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_印记刻印(1.1)_未知事件": {
+        "$__mpe_code": {
+            "position": {
+                "x": 782,
+                "y": 293
+            }
+        }
+    },
+    "$__mpe_external_离开地点_未知事件": {
+        "$__mpe_code": {
+            "position": {
+                "x": 794,
+                "y": 205
+            }
+        }
+    },
+    "$__mpe_external_统合_未知事件": {
+        "$__mpe_code": {
+            "position": {
+                "x": 784,
+                "y": 433
+            }
+        }
+    },
+    "$__mpe_external_选择卡牌移除_未知事件": {
+        "$__mpe_code": {
+            "position": {
+                "x": 792,
+                "y": 99
+            }
+        }
+    },
+    "未知事件": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    24,
+                    287,
+                    54,
+                    81
+                ],
+                "template": [
+                    "未知事件/黑块.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    206,
+                    389,
+                    25,
+                    21
+                ]
+            }
+        },
+        "repeat": 5,
+        "repeat_delay": 800,
+        "timeout": 3000,
+        "next": [
+            "离开地点",
+            "选择卡牌移除",
+            "印记刻印(1.1)",
+            "终结"
+        ],
+        "on_error": [
+            "统合"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 259,
+                "y": 111
+            }
+        }
+    },
+    "$__mpe_external_终结_未知事件": {
+        "$__mpe_code": {
+            "position": {
+                "x": 785,
+                "y": 369
+            }
+        }
+    }
+}

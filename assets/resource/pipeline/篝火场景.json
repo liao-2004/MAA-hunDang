@@ -1,0 +1,415 @@
+{
+    "$__mpe_config_篝火场景": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1792903117269,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\篝火场景.json",
+            "savedViewport": {
+                "x": -21,
+                "y": 164,
+                "zoom": 0.32
+            },
+            "filename": "篝火场景",
+            "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_离开地点_篝火场景": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2930,
+                "y": 707
+            }
+        }
+    },
+    "$__mpe_external_选择卡片_篝火场景": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1698,
+                "y": -315
+            }
+        }
+    },
+    "坐下休息": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    141,
+                    384,
+                    98,
+                    44
+                ]
+            }
+        },
+        "repeat": 2,
+        "repeat_delay": 500,
+        "next": [
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1934,
+                "y": 739
+            }
+        }
+    },
+    "护符1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    510,
+                    41,
+                    249,
+                    76
+                ],
+                "template": [
+                    "激活护符.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    747,
+                    281,
+                    52,
+                    52
+                ]
+            }
+        },
+        "post_delay": 800,
+        "timeout": 600,
+        "next": [
+            "激活1"
+        ],
+        "on_error": [
+            "护符2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1657,
+                "y": -36
+            }
+        }
+    },
+    "护符2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    510,
+                    41,
+                    249,
+                    76
+                ],
+                "template": [
+                    "激活护符.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    815,
+                    403,
+                    49,
+                    38
+                ]
+            }
+        },
+        "post_delay": 800,
+        "timeout": 600,
+        "next": [
+            "激活2"
+        ],
+        "on_error": [
+            "护符3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2486,
+                "y": -72
+            }
+        }
+    },
+    "护符3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    510,
+                    41,
+                    249,
+                    76
+                ],
+                "template": [
+                    "激活护符.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1042,
+                    282,
+                    60,
+                    54
+                ]
+            }
+        },
+        "post_delay": 800,
+        "timeout": 600,
+        "next": [
+            "激活3"
+        ],
+        "on_error": [
+            "护符4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3032,
+                "y": -54
+            }
+        }
+    },
+    "护符4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    510,
+                    41,
+                    249,
+                    76
+                ],
+                "template": [
+                    "激活护符.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    984,
+                    397,
+                    60,
+                    54
+                ]
+            }
+        },
+        "post_delay": 800,
+        "timeout": 600,
+        "next": [
+            "激活4"
+        ],
+        "on_error": [
+            "退出护符选择"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3510,
+                "y": 5
+            }
+        }
+    },
+    "激活1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    312,
+                    121,
+                    921,
+                    596
+                ],
+                "template": [
+                    "护符逻辑/激活.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "timeout": 5000,
+        "next": [
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2013,
+                "y": -137
+            }
+        }
+    },
+    "激活2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    312,
+                    121,
+                    921,
+                    596
+                ],
+                "template": [
+                    "护符逻辑/激活.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "timeout": 5000,
+        "next": [
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2750,
+                "y": -55
+            }
+        }
+    },
+    "激活3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    312,
+                    121,
+                    921,
+                    596
+                ],
+                "template": [
+                    "护符逻辑/激活.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "timeout": 5000,
+        "next": [
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3272,
+                "y": -38
+            }
+        }
+    },
+    "激活4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    312,
+                    121,
+                    921,
+                    596
+                ],
+                "template": [
+                    "护符逻辑/激活.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "timeout": 5000,
+        "next": [
+            "离开地点"
+        ],
+        "on_error": [
+            "退出护符选择"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3782,
+                "y": 71
+            }
+        }
+    },
+    "篝火场景": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    35,
+                    35,
+                    249,
+                    124
+                ],
+                "template": [
+                    "篝火.png",
+                    "篝火事件/小篝火.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    134,
+                    481,
+                    92,
+                    36
+                ]
+            }
+        },
+        "repeat": 2,
+        "repeat_delay": 500,
+        "next": [
+            "护符1",
+            "选择卡片",
+            "坐下休息"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1113,
+                "y": 145
+            }
+        }
+    },
+    "退出护符选择": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1096,
+                    53,
+                    143,
+                    130
+                ],
+                "template": [
+                    "护符逻辑/退出护符选择按钮.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "坐下休息"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1539,
+                "y": 694
+            }
+        }
+    }
+}

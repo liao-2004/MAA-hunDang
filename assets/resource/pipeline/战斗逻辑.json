@@ -1,0 +1,576 @@
+{
+    "$__mpe_config_战斗逻辑": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1792946266851,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\战斗逻辑.json",
+            "savedViewport": {
+                "x": -41,
+                "y": 179,
+                "zoom": 0.49
+            },
+            "filename": "战斗逻辑",
+            "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_留下遗物_战斗逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2045,
+                "y": 659
+            }
+        }
+    },
+    "$__mpe_external_离开地点_战斗逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2044,
+                "y": 622
+            }
+        }
+    },
+    "$__mpe_external_终结_战斗逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2068,
+                "y": 546
+            }
+        }
+    },
+    "$__mpe_external_继续_战斗逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2073,
+                "y": 464
+            }
+        }
+    },
+    "卡死-结束脱离": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1151,
+                    324,
+                    121,
+                    60
+                ]
+            }
+        },
+        "timeout": 2000,
+        "next": [
+            "战斗中"
+        ],
+        "on_error": [
+            "离开地点",
+            "同化",
+            "继续",
+            "终结",
+            "复活",
+            "黄金事件",
+            "留下遗物",
+            "卡死-结束脱离"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1208,
+                "y": 550
+            }
+        }
+    },
+    "同化": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    686,
+                    363,
+                    63,
+                    43
+                ],
+                "template": [
+                    "战斗场景/同化.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    610,
+                    580,
+                    33,
+                    32
+                ]
+            }
+        },
+        "next": [
+            "同化确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2000,
+                "y": 232
+            }
+        }
+    },
+    "同化完成判断": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    686,
+                    363,
+                    63,
+                    43
+                ],
+                "template": [
+                    "战斗场景/同化.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "战斗-设置"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1790,
+                "y": -256
+            }
+        }
+    },
+    "同化确认": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    629,
+                    433,
+                    25,
+                    21
+                ]
+            }
+        },
+        "next": [
+            "同化完成判断",
+            "自动战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2304,
+                "y": 164
+            }
+        }
+    },
+    "复活": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    739,
+                    581,
+                    82,
+                    44
+                ],
+                "template": [
+                    "战斗场景/挣扎.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "自动战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2029,
+                "y": 775
+            }
+        }
+    },
+    "复活1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    739,
+                    581,
+                    82,
+                    44
+                ],
+                "template": [
+                    "战斗场景/挣扎.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 3000,
+        "next": [
+            "自动战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2158,
+                "y": -162
+            }
+        }
+    },
+    "战斗-设置": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1159,
+                    13,
+                    92,
+                    73
+                ],
+                "template": [
+                    "战斗场景/战斗-设置.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "战斗-设置2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 778,
+                "y": -118
+            }
+        }
+    },
+    "战斗-设置2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1201,
+                    33,
+                    30,
+                    34
+                ]
+            }
+        },
+        "next": [
+            "战斗-设置3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1017,
+                "y": -214
+            }
+        }
+    },
+    "战斗-设置3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    772,
+                    232,
+                    48,
+                    27
+                ]
+            }
+        },
+        "next": [
+            "继续"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1277,
+                "y": -214
+            }
+        }
+    },
+    "战斗中": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    3,
+                    571,
+                    98,
+                    119
+                ],
+                "template": [
+                    "战斗场景/战斗场景.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1208,
+                    268,
+                    19,
+                    14
+                ]
+            }
+        },
+        "timeout": 10000,
+        "next": [
+            "自动战斗点击前点击"
+        ],
+        "on_error": [
+            "卡死-结束脱离"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 738,
+                "y": 461
+            }
+        }
+    },
+    "战斗场景": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    575,
+                    128,
+                    136
+                ],
+                "template": [
+                    "战斗场景/战斗场景.png"
+                ]
+            }
+        },
+        "timeout": 1000,
+        "focus": "进入战斗",
+        "next": [
+            "粪怪",
+            "战斗中"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 305,
+                "y": 235
+            }
+        }
+    },
+    "粪怪": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    540,
+                    29,
+                    192,
+                    54
+                ],
+                "template": [
+                    "战斗场景/粪怪1.png"
+                ]
+            }
+        },
+        "next": [
+            "战斗-设置"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 530,
+                "y": -29
+            }
+        }
+    },
+    "结束消失": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1151,
+                    324,
+                    121,
+                    60
+                ],
+                "template": [
+                    "战斗场景/卡死-结束回合.png"
+                ]
+            }
+        },
+        "inverse": true,
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1204,
+                    255,
+                    17,
+                    19
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 2000,
+        "next": [
+            "复活1",
+            "战斗中"
+        ],
+        "on_error": [
+            "卡死-结束脱离"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1369,
+                "y": 22
+            }
+        }
+    },
+    "自动战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1177,
+                    251,
+                    93,
+                    38
+                ],
+                "template": [
+                    "战斗场景/te结束战斗.png"
+                ]
+            }
+        },
+        "pre_delay": 2500,
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 0,
+        "timeout": 5000,
+        "next": [
+            "结束消失"
+        ],
+        "on_error": [
+            "复活1",
+            "卡死-结束脱离"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1009,
+                "y": 83
+            }
+        }
+    },
+    "自动战斗点击前点击": {
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1200,
+                    263,
+                    21,
+                    13
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 10000,
+        "rate_limit": 0,
+        "next": [
+            "自动战斗"
+        ],
+        "on_error": [
+            "黄金事件_副本1",
+            "卡死-结束脱离"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 705,
+                "y": 127
+            }
+        }
+    },
+    "黄金事件": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    532,
+                    225,
+                    217,
+                    95
+                ],
+                "template": [
+                    "战斗场景/黄金事件.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    791,
+                    338,
+                    16,
+                    17
+                ]
+            }
+        },
+        "next": [
+            "黄金事件",
+            "自动战斗点击前点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1966,
+                "y": 958
+            }
+        }
+    },
+    "黄金事件_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    532,
+                    225,
+                    217,
+                    95
+                ],
+                "template": [
+                    "战斗场景/黄金事件.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    791,
+                    338,
+                    16,
+                    17
+                ]
+            }
+        },
+        "next": [
+            "黄金事件_副本1",
+            "自动战斗点击前点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1646,
+                "y": 267
+            }
+        }
+    }
+}

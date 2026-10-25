@@ -1,0 +1,856 @@
+{
+    "$__mpe_config_游艺事件": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1792946274675,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\游艺事件.json",
+            "savedViewport": {
+                "x": 618,
+                "y": 354,
+                "zoom": 0.64
+            },
+            "filename": "游艺事件",
+            "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_离开地点_游艺事件": {
+        "$__mpe_code": {
+            "position": {
+                "x": 882,
+                "y": -134
+            }
+        }
+    },
+    "决定了": {
+        "pre_delay": 2000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    782,
+                    554,
+                    32,
+                    27
+                ]
+            }
+        },
+        "repeat": 2,
+        "timeout": 3000,
+        "next": [
+            "游艺-接受并离开",
+            "游艺-点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 197,
+                "y": 10
+            }
+        }
+    },
+    "刻印-退出": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    3,
+                    35,
+                    105,
+                    70
+                ],
+                "template": [
+                    "游艺/刻印-退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3199,
+                "y": 986
+            }
+        }
+    },
+    "刻印1": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    577,
+                    587,
+                    24,
+                    13
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "印记刻印(1.2)",
+            "游艺-点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1044,
+                "y": 572
+            }
+        }
+    },
+    "刻印1_副本1": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    577,
+                    587,
+                    24,
+                    13
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "印记刻印(1.4)_副本2",
+            "游艺-点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1019,
+                "y": 922
+            }
+        }
+    },
+    "刻印1_副本2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    577,
+                    587,
+                    24,
+                    13
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "印记刻印(1.4)_副本3",
+            "游艺-点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1660,
+                "y": 917
+            }
+        }
+    },
+    "刻印1_副本3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    577,
+                    587,
+                    24,
+                    13
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "印记刻印(1.4)_副本4",
+            "游艺-点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2241,
+                "y": 964
+            }
+        }
+    },
+    "刻印1_副本4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    577,
+                    587,
+                    24,
+                    13
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "游艺-点击空白关闭",
+            "刻印-退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2863,
+                "y": 956
+            }
+        }
+    },
+    "刻印2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    577,
+                    587,
+                    24,
+                    13
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "印记刻印(1.3)",
+            "游艺-点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1645,
+                "y": 577
+            }
+        }
+    },
+    "刻印3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    577,
+                    587,
+                    24,
+                    13
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "印记刻印(1.4)",
+            "游艺-点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2253,
+                "y": 608
+            }
+        }
+    },
+    "刻印4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    577,
+                    587,
+                    24,
+                    13
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "游艺-点击空白关闭",
+            "印记刻印(1.4)_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2775,
+                "y": 614
+            }
+        }
+    },
+    "印记刻印(1.1)": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    926,
+                    22,
+                    184,
+                    48
+                ],
+                "template": [
+                    "游艺/印记刻印.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    820,
+                    167,
+                    38,
+                    36
+                ]
+            }
+        },
+        "next": [
+            "刻印1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 701,
+                "y": 549
+            }
+        }
+    },
+    "印记刻印(1.2)": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    926,
+                    22,
+                    184,
+                    48
+                ],
+                "template": [
+                    "游艺/印记刻印.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    940,
+                    171,
+                    25,
+                    13
+                ]
+            }
+        },
+        "next": [
+            "刻印2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1360,
+                "y": 582
+            }
+        }
+    },
+    "印记刻印(1.3)": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    926,
+                    22,
+                    184,
+                    48
+                ],
+                "template": [
+                    "游艺/印记刻印.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1051,
+                    182,
+                    24,
+                    14
+                ]
+            }
+        },
+        "next": [
+            "刻印3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1980,
+                "y": 578
+            }
+        }
+    },
+    "印记刻印(1.4)": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    926,
+                    22,
+                    184,
+                    48
+                ],
+                "template": [
+                    "游艺/印记刻印.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1153,
+                    186,
+                    33,
+                    17
+                ]
+            }
+        },
+        "next": [
+            "刻印4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2522,
+                "y": 602
+            }
+        }
+    },
+    "印记刻印(1.4)_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    926,
+                    22,
+                    184,
+                    48
+                ],
+                "template": [
+                    "游艺/印记刻印.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    818,
+                    346,
+                    21,
+                    17
+                ]
+            }
+        },
+        "next": [
+            "刻印1_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 617,
+                "y": 926
+            }
+        }
+    },
+    "印记刻印(1.4)_副本2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    926,
+                    22,
+                    184,
+                    48
+                ],
+                "template": [
+                    "游艺/印记刻印.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    936,
+                    347,
+                    13,
+                    14
+                ]
+            }
+        },
+        "next": [
+            "刻印1_副本2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1344,
+                "y": 892
+            }
+        }
+    },
+    "印记刻印(1.4)_副本3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    926,
+                    22,
+                    184,
+                    48
+                ],
+                "template": [
+                    "游艺/印记刻印.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1064,
+                    344,
+                    22,
+                    10
+                ]
+            }
+        },
+        "next": [
+            "刻印1_副本3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1981,
+                "y": 922
+            }
+        }
+    },
+    "印记刻印(1.4)_副本4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    926,
+                    22,
+                    184,
+                    48
+                ],
+                "template": [
+                    "游艺/印记刻印.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1170,
+                    355,
+                    19,
+                    13
+                ]
+            }
+        },
+        "next": [
+            "刻印1_副本4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2548,
+                "y": 913
+            }
+        }
+    },
+    "大转盘": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    558,
+                    30,
+                    174,
+                    73
+                ],
+                "template": [
+                    "游艺/大转盘.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    941,
+                    348,
+                    82,
+                    24
+                ]
+            }
+        },
+        "repeat": 2,
+        "repeat_delay": 3000,
+        "post_delay": 1000,
+        "next": [
+            "游艺-接受并离开"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -56,
+                "y": 398
+            }
+        }
+    },
+    "幸运之锚": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    550,
+                    24,
+                    178,
+                    54
+                ],
+                "template": [
+                    "游艺/幸运之锚.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    607,
+                    576,
+                    48,
+                    25
+                ]
+            }
+        },
+        "next": [
+            "印记刻印(1.1)",
+            "游艺-接受并离开",
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -47,
+                "y": 773
+            }
+        }
+    },
+    "最佳轮换": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    544,
+                    15,
+                    178,
+                    70
+                ],
+                "template": [
+                    "游艺/最佳轮换.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    617,
+                    576,
+                    32,
+                    24
+                ]
+            }
+        },
+        "next": [
+            "决定了"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -97,
+                "y": 23
+            }
+        }
+    },
+    "游艺-接受并离开": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    706,
+                    549,
+                    224,
+                    89
+                ],
+                "template": [
+                    "游艺/游艺-接受并离开.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "游艺-点击空白关闭",
+            "印记刻印(1.1)",
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 511,
+                "y": 332
+            }
+        }
+    },
+    "游艺-点击空白关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    474,
+                    639,
+                    339,
+                    75
+                ],
+                "template": [
+                    "游艺/游艺-领取并离开.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 765,
+                "y": 179
+            }
+        }
+    },
+    "游艺事件": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    42,
+                    37,
+                    276,
+                    151
+                ],
+                "template": [
+                    "游艺/游艺.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    146,
+                    476,
+                    49,
+                    40
+                ]
+            }
+        },
+        "next": [
+            "最佳轮换",
+            "大转盘",
+            "移形换位",
+            "幸运之锚"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -498,
+                "y": -99
+            }
+        }
+    },
+    "移形换位": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    517,
+                    11,
+                    232,
+                    63
+                ],
+                "template": [
+                    "游艺/移形换位.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    617,
+                    563,
+                    48,
+                    25
+                ]
+            }
+        },
+        "post_delay": 5000,
+        "next": [
+            "移形换位-决定了"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -77,
+                "y": -284
+            }
+        }
+    },
+    "移形换位-决定了": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    379,
+                    170,
+                    25,
+                    22
+                ]
+            }
+        },
+        "next": [
+            "移形换位-开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 159,
+                "y": -232
+            }
+        }
+    },
+    "移形换位-开始": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    629,
+                    576,
+                    16,
+                    16
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 2000,
+        "next": [
+            "游艺-接受并离开",
+            "游艺-点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 353,
+                "y": -264
+            }
+        }
+    }
+}

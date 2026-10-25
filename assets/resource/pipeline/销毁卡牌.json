@@ -1,0 +1,312 @@
+{
+    "$__mpe_config_销毁卡牌": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1792946285703,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\销毁卡牌.json",
+            "savedViewport": {
+                "x": 173,
+                "y": 268,
+                "zoom": 0.57
+            },
+            "filename": "销毁卡牌",
+            "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_离开地点_销毁卡牌": {
+        "$__mpe_code": {
+            "position": {
+                "x": 570,
+                "y": -129
+            }
+        }
+    },
+    "原能卡牌": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    774,
+                    97,
+                    481,
+                    523
+                ],
+                "template": "原能卡牌.png"
+            }
+        },
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 3000,
+        "next": [
+            "销毁"
+        ],
+        "on_error": [
+            "移除卡牌界面返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 591,
+                "y": -43
+            }
+        }
+    },
+    "盾牌卡牌": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    774,
+                    97,
+                    481,
+                    523
+                ],
+                "template": [
+                    "商店场景/盾牌.png"
+                ]
+            }
+        },
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 2000,
+        "next": [
+            "销毁"
+        ],
+        "on_error": [
+            "移除卡牌界面返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 623,
+                "y": 875
+            }
+        }
+    },
+    "移除卡牌": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    38,
+                    38,
+                    244,
+                    106
+                ],
+                "template": [
+                    "商店场景/商店场景.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    174,
+                    527,
+                    27,
+                    22
+                ]
+            }
+        },
+        "next": [
+            "移除卡牌界面"
+        ],
+        "on_error": [
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -99,
+                "y": 80
+            }
+        }
+    },
+    "移除卡牌界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    902,
+                    16,
+                    211,
+                    84
+                ],
+                "template": [
+                    "商店场景/移除卡片.png"
+                ]
+            }
+        },
+        "timeout": 3000,
+        "next": [
+            "原能卡牌",
+            "金块卡牌",
+            "负担卡牌",
+            "盾牌卡牌"
+        ],
+        "on_error": [
+            "移除卡牌界面返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 157,
+                "y": 279
+            }
+        }
+    },
+    "移除卡牌界面返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    25,
+                    24,
+                    87,
+                    62
+                ],
+                "template": "移除卡牌界面返回.png"
+            }
+        },
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    58,
+                    42,
+                    24,
+                    21
+                ]
+            }
+        },
+        "next": [
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1778,
+                "y": 343
+            }
+        }
+    },
+    "负担卡牌": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    774,
+                    97,
+                    481,
+                    523
+                ],
+                "template": "负担卡牌.png"
+            }
+        },
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 3000,
+        "next": [
+            "销毁"
+        ],
+        "on_error": [
+            "移除卡牌界面返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 620,
+                "y": 263
+            }
+        }
+    },
+    "金块卡牌": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    774,
+                    97,
+                    481,
+                    523
+                ],
+                "template": "金块卡牌.png"
+            }
+        },
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 2000,
+        "next": [
+            "销毁"
+        ],
+        "on_error": [
+            "移除卡牌界面返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 620,
+                "y": 585
+            }
+        }
+    },
+    "销毁": {
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    571,
+                    587,
+                    19,
+                    21
+                ]
+            }
+        },
+        "post_delay": 1500,
+        "timeout": 1000,
+        "next": [
+            "销毁确认",
+            "移除卡牌界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 927,
+                "y": 97
+            }
+        }
+    },
+    "销毁确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    545,
+                    574,
+                    95,
+                    57
+                ],
+                "template": [
+                    "商店场景/商店-销毁.png"
+                ]
+            }
+        },
+        "timeout": 1000,
+        "rate_limit": 2000,
+        "next": [
+            "移除卡牌界面返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1236,
+                "y": 105
+            }
+        }
+    }
+}

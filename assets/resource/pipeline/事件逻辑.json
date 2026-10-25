@@ -1,0 +1,623 @@
+{
+    "$__mpe_config_事件逻辑": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1792940896062,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\事件逻辑.json",
+            "savedViewport": {
+                "x": -660,
+                "y": -108,
+                "zoom": 0.61
+            },
+            "filename": "事件逻辑",
+            "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_地图场景_事件逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2483,
+                "y": 890
+            }
+        }
+    },
+    "$__mpe_external_战斗场景_事件逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2276,
+                "y": 1152
+            }
+        }
+    },
+    "$__mpe_external_未知事件_事件逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2533,
+                "y": 420
+            }
+        }
+    },
+    "$__mpe_external_游艺事件_事件逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1594,
+                "y": 1612
+            }
+        }
+    },
+    "$__mpe_external_统合_事件逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2524,
+                "y": 606
+            }
+        }
+    },
+    "事件-失控书士": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    33,
+                    24,
+                    251,
+                    117
+                ],
+                "template": [
+                    "事件逻辑/事件-失控书士.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    155,
+                    486,
+                    48,
+                    27
+                ]
+            }
+        },
+        "repeat": 2,
+        "repeat_delay": 400,
+        "next": [
+            "战斗场景"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1755,
+                "y": 1418
+            }
+        }
+    },
+    "事件逻辑": {
+        "timeout": 4000,
+        "next": [
+            "路口",
+            "狭缝",
+            "离开地点",
+            "离开地点2",
+            "游艺事件",
+            "事件-失控书士"
+        ],
+        "on_error": [
+            "选择卡片",
+            "未知事件",
+            "统合"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1126,
+                "y": 54
+            }
+        }
+    },
+    "原能卡销毁": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    620,
+                    132,
+                    614,
+                    525
+                ],
+                "template": [
+                    "原能卡牌.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "通用-确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2270,
+                "y": 1226
+            }
+        }
+    },
+    "宝石收集者": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    127,
+                    248,
+                    1018,
+                    144
+                ],
+                "template": [
+                    "始源之凝视-宝石收集者.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -2,
+                    224,
+                    11,
+                    6
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 600,
+        "post_delay": 8000,
+        "timeout": 1000,
+        "rate_limit": 1000,
+        "next": [
+            "统合",
+            "离开地点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2063,
+                "y": -240
+            }
+        }
+    },
+    "忽视销毁": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    620,
+                    132,
+                    614,
+                    525
+                ],
+                "template": [
+                    "负担卡牌.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "通用-确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2266,
+                "y": 1424
+            }
+        }
+    },
+    "拳头销毁": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    620,
+                    132,
+                    614,
+                    525
+                ],
+                "template": [
+                    "拳头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "通用-确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2293,
+                "y": 1902
+            }
+        }
+    },
+    "火斧": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    634,
+                    141,
+                    587,
+                    503
+                ],
+                "template": [
+                    "事件逻辑/复制卡片-火斧.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "通用-确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2259,
+                "y": 2111
+            }
+        }
+    },
+    "狭缝": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    37,
+                    45,
+                    173,
+                    119
+                ],
+                "template": [
+                    "事件逻辑/狭缝.png"
+                ]
+            }
+        },
+        "pre_delay": 800,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    164,
+                    487,
+                    43,
+                    33
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 500,
+        "next": [
+            "战斗场景",
+            "选择卡片-复制",
+            "选择卡片",
+            "狭缝"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1778,
+                "y": 353
+            }
+        }
+    },
+    "直接离开-红框": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    663,
+                    420,
+                    455,
+                    73
+                ],
+                "template": [
+                    "直接离开-红框.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    742,
+                    441,
+                    76,
+                    32
+                ]
+            }
+        },
+        "timeout": 2500,
+        "next": [
+            "地图场景"
+        ],
+        "on_error": [
+            "离开地点",
+            "统合"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2082,
+                "y": 802
+            }
+        }
+    },
+    "盾牌销毁": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    620,
+                    132,
+                    614,
+                    525
+                ],
+                "template": [
+                    "盾牌.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "通用-确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2265,
+                "y": 1646
+            }
+        }
+    },
+    "离开地点": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1065,
+                    422,
+                    181,
+                    178
+                ],
+                "template": [
+                    "事件逻辑/离开地点.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1137,
+                    498,
+                    51,
+                    43
+                ]
+            }
+        },
+        "repeat": 2,
+        "repeat_delay": 600,
+        "timeout": 1200,
+        "next": [
+            "直接离开-红框"
+        ],
+        "on_error": [
+            "地图场景",
+            "统合"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1627,
+                "y": 582
+            }
+        }
+    },
+    "离开地点2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1112,
+                    479,
+                    167,
+                    136
+                ],
+                "template": [
+                    "事件逻辑/始源之凝视-离开地点.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1174,
+                    525,
+                    49,
+                    32
+                ]
+            }
+        },
+        "repeat": 2,
+        "repeat_delay": 600,
+        "next": [
+            "直接离开-红框"
+        ],
+        "on_error": [
+            "地图场景",
+            "统合"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1678,
+                "y": 1029
+            }
+        }
+    },
+    "路口": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    27,
+                    35,
+                    209,
+                    127
+                ],
+                "template": [
+                    "事件逻辑/路口.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    183,
+                    394,
+                    41,
+                    29
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 400,
+        "next": [
+            "狭缝",
+            "地图场景"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1816,
+                "y": 57
+            }
+        }
+    },
+    "选择卡片": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    756,
+                    22,
+                    336,
+                    81
+                ],
+                "template": [
+                    "事件逻辑/选择卡牌.png"
+                ]
+            }
+        },
+        "next": [
+            "拳头销毁",
+            "原能卡销毁",
+            "盾牌销毁",
+            "火斧"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1606,
+                "y": 2395
+            }
+        }
+    },
+    "选择卡片-复制": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    762,
+                    49,
+                    324,
+                    56
+                ],
+                "template": [
+                    "事件逻辑/复制卡片.png"
+                ]
+            }
+        },
+        "next": [
+            "火斧",
+            "拳头销毁"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1703,
+                "y": 2060
+            }
+        }
+    },
+    "选择卡牌移除": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    744,
+                    7,
+                    385,
+                    119
+                ],
+                "template": [
+                    "事件逻辑/选择卡牌移除.png"
+                ]
+            }
+        },
+        "timeout": 3000,
+        "next": [
+            "原能卡销毁",
+            "忽视销毁",
+            "盾牌销毁"
+        ],
+        "on_error": [
+            "拳头销毁"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1688,
+                "y": 1741
+            }
+        }
+    },
+    "通用-确认": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    899,
+                    659,
+                    46,
+                    22
+                ]
+            }
+        },
+        "post_delay": 1500,
+        "timeout": 3000,
+        "next": [
+            "选择卡牌移除",
+            "选择卡片-复制",
+            "选择卡片"
+        ],
+        "on_error": [
+            "离开地点",
+            "战斗场景"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2879,
+                "y": 1257
+            }
+        }
+    }
+}
