@@ -4,13 +4,13 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "lastSyncTime": 1792927602847,
-            "isModifiedExternally": false,
+            "isModifiedExternally": true,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\开始游戏.json",
             "savedViewport": {
-                "x": 503,
-                "y": 537,
-                "zoom": 0.65
+                "x": -127,
+                "y": 561,
+                "zoom": 0.74
             },
             "filename": "开始游戏",
             "version": "v2.1.0"
@@ -135,7 +135,7 @@
         "repeat": 2,
         "post_delay": 6000,
         "timeout": -1,
-        "focus": "进入副本",
+        "focus": "",
         "next": [
             "宝石收集者",
             "离开地点"

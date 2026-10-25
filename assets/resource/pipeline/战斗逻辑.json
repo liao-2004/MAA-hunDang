@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1792946266851,
+            "lastSyncTime": 1792951244294,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\战斗逻辑.json",
             "savedViewport": {
-                "x": -41,
-                "y": 179,
-                "zoom": 0.49
+                "x": -355,
+                "y": 218,
+                "zoom": 0.75
             },
             "filename": "战斗逻辑",
             "version": "v2.1.0"
@@ -76,8 +76,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1208,
-                "y": 550
+                "x": 1234,
+                "y": 552
             }
         }
     },
@@ -112,8 +112,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2000,
-                "y": 232
+                "x": 1955,
+                "y": 291
             }
         }
     },
@@ -191,8 +191,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2029,
-                "y": 775
+                "x": 2044,
+                "y": 741
             }
         }
     },
@@ -211,17 +211,20 @@
                 ]
             }
         },
+        "pre_delay": 0,
         "action": {
             "type": "Click"
         },
+        "post_delay": 0,
         "timeout": 3000,
+        "rate_limit": 0,
         "next": [
             "自动战斗"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2158,
-                "y": -162
+                "x": 2348,
+                "y": -261
             }
         }
     },
@@ -332,8 +335,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 738,
-                "y": 461
+                "x": 734,
+                "y": 473
             }
         }
     },
@@ -353,7 +356,7 @@
             }
         },
         "timeout": 1000,
-        "focus": "进入战斗",
+        "focus": "",
         "next": [
             "粪怪",
             "战斗中"
@@ -464,8 +467,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1009,
-                "y": 83
+                "x": 1146,
+                "y": -30
             }
         }
     },
@@ -489,13 +492,14 @@
             "自动战斗"
         ],
         "on_error": [
+            "复活1",
             "黄金事件_副本1",
             "卡死-结束脱离"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 705,
-                "y": 127
+                "x": 782,
+                "y": 80
             }
         }
     },

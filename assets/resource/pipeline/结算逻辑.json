@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1792936615427,
+            "lastSyncTime": 1792951015123,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\结算逻辑.json",
             "savedViewport": {
-                "x": -2084,
-                "y": 179,
+                "x": -2342,
+                "y": 135,
                 "zoom": 0.86
             },
             "filename": "结算逻辑",
@@ -148,14 +148,15 @@
         },
         "post_delay": 5000,
         "timeout": -1,
+        "focus": "游戏结束",
         "next": [
             "启动祭坛",
             "点击空白关闭"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4100,
-                "y": 217
+                "x": 4012,
+                "y": 176
             }
         }
     },
@@ -182,8 +183,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3401,
-                "y": 499
+                "x": 3421,
+                "y": 471
             }
         }
     }
