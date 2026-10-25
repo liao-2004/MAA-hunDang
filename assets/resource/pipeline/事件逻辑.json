@@ -8,12 +8,34 @@
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\事件逻辑.json",
             "savedViewport": {
-                "x": -982,
-                "y": 416,
-                "zoom": 0.8
+                "x": -486,
+                "y": -478,
+                "zoom": 0.46
             },
             "filename": "事件逻辑",
             "version": "v2.1.0"
+        }
+    },
+    "空": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    953,
+                    207,
+                    14,
+                    14
+                ]
+            }
+        },
+        "next": [
+            "通用-确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2255,
+                "y": 2380
+            }
         }
     },
     "$__mpe_external_地图场景_事件逻辑": {
@@ -524,7 +546,8 @@
             "拳头销毁",
             "原能卡销毁",
             "盾牌销毁",
-            "火斧"
+            "火斧",
+            "空"
         ],
         "$__mpe_code": {
             "position": {
