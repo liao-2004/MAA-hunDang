@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1792946329708,
+            "lastSyncTime": 1793016345538,
             "isModifiedExternally": false,
             "isDeleted": false,
-            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\统合.json",
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\统合.json",
             "savedViewport": {
-                "x": -220,
-                "y": 157,
-                "zoom": 0.65
+                "x": -265,
+                "y": 77,
+                "zoom": 0.74
             },
             "filename": "统合",
             "version": "v2.1.0"
@@ -19,8 +19,8 @@
     "$__mpe_external_事件逻辑_统合": {
         "$__mpe_code": {
             "position": {
-                "x": 1369,
-                "y": 759
+                "x": 1378,
+                "y": 737
             }
         }
     },
@@ -59,32 +59,32 @@
     "$__mpe_external_游艺事件_统合": {
         "$__mpe_code": {
             "position": {
-                "x": 1403,
-                "y": 422
+                "x": 1422,
+                "y": 363
             }
         }
     },
     "$__mpe_external_移除卡牌_统合": {
         "$__mpe_code": {
             "position": {
-                "x": 1392,
-                "y": 510
+                "x": 1416,
+                "y": 444
             }
         }
     },
     "$__mpe_external_篝火场景_统合": {
         "$__mpe_code": {
             "position": {
-                "x": 1398,
-                "y": 337
+                "x": 1385,
+                "y": 647
             }
         }
     },
     "$__mpe_external_锻造场景_统合": {
         "$__mpe_code": {
             "position": {
-                "x": 1386,
-                "y": 643
+                "x": 1394,
+                "y": 533
             }
         }
     },
@@ -95,10 +95,10 @@
         "rate_limit": 0,
         "next": [
             "战斗场景",
-            "篝火场景",
             "地图场景",
             "移除卡牌",
             "锻造场景",
+            "篝火场景",
             "事件逻辑",
             "未知事件",
             "奖励场景",

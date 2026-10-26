@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793014841201,
+            "lastSyncTime": 1793022166079,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\结算逻辑.json",
             "savedViewport": {
-                "x": -1328,
-                "y": 113,
-                "zoom": 0.57
+                "x": -2216,
+                "y": 185,
+                "zoom": 0.75
             },
             "filename": "结算逻辑",
             "version": "v2.1.0"
@@ -42,19 +42,22 @@
         "action": {
             "type": "Click"
         },
-        "repeat": 3,
         "repeat_delay": 400,
         "post_delay": 1000,
-        "timeout": -1,
+        "timeout": 2000,
         "next": [
             "结束探索",
-            "点击空白关闭",
-            "启动祭坛"
+            "点击空白关闭"
+        ],
+        "on_error": [
+            "留下遗物",
+            "终结",
+            "继续"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3499,
-                "y": 360
+                "x": 3630,
+                "y": 580
             }
         }
     },
@@ -77,15 +80,20 @@
             "type": "Click"
         },
         "post_delay": 3000,
+        "timeout": 2000,
+        "focus": "",
         "next": [
             "继续",
             "点击空白关闭",
             "结束探索"
         ],
+        "on_error": [
+            "终结"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 3203,
-                "y": 117
+                "x": 2919,
+                "y": -70
             }
         }
     },
@@ -102,17 +110,19 @@
         "action": {
             "type": "Click"
         },
-        "repeat": 3,
-        "repeat_delay": 300,
+        "timeout": 2000,
         "next": [
             "留下遗物",
             "继续",
-            "黑屏"
+            "点击空白关闭"
+        ],
+        "on_error": [
+            "启动祭坛"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2573,
-                "y": 294
+                "x": 2351,
+                "y": 238
             }
         }
     },
@@ -136,15 +146,21 @@
         },
         "post_delay": 7000,
         "timeout": -1,
-        "focus": "游戏结束",
+        "focus": "",
         "next": [
             "启动祭坛",
-            "点击空白关闭"
+            "点击空白关闭",
+            "结束探索"
+        ],
+        "on_error": [
+            "继续",
+            "留下遗物",
+            "终结"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4012,
-                "y": 176
+                "x": 3755,
+                "y": -93
             }
         }
     },
@@ -166,55 +182,19 @@
         "action": {
             "type": "Click"
         },
+        "timeout": 2000,
         "next": [
             "点击空白关闭",
             "结束探索"
         ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3180,
-                "y": 447
-            }
-        }
-    },
-    "黑屏": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    886,
-                    346,
-                    75,
-                    41
-                ]
-            }
-        },
-        "repeat": 3,
-        "repeat_delay": 500,
-        "next": [
-            "黑屏",
-            "留下遗物",
-            "继续",
-            "点击空白关闭"
+        "on_error": [
+            "终结",
+            "留下遗物"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2791,
-                "y": 611
-            }
-        }
-    },
-    "放弃": {
-        "next": [
-            "继续",
-            "点击空白关闭",
-            "结束探索",
-            "黑屏"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3274,
-                "y": 862
+                "x": 2881,
+                "y": 539
             }
         }
     }

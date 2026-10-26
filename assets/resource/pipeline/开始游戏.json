@@ -3,13 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1793019741619,
+            "isModifiedExternally": true,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\开始游戏.json",
             "savedViewport": {
-                "x": -17,
-                "y": 484,
-                "zoom": 0.61
+                "x": -267,
+                "y": 359,
+                "zoom": 0.65
             },
             "filename": "开始游戏",
             "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_地图场景_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": -10,
+                "y": -818
+            }
         }
     },
     "$__mpe_external_宝石收集者_开始游戏": {
@@ -17,6 +29,14 @@
             "position": {
                 "x": 1794,
                 "y": -101
+            }
+        }
+    },
+    "$__mpe_external_战斗场景_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": -12,
+                "y": -691
             }
         }
     },
@@ -107,20 +127,6 @@
         }
     },
     "坠入深境": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    551,
-                    310,
-                    184,
-                    51
-                ],
-                "template": [
-                    "坠入深境.png"
-                ]
-            }
-        },
         "action": {
             "type": "Click",
             "param": {
@@ -133,7 +139,7 @@
             }
         },
         "repeat": 2,
-        "post_delay": 6000,
+        "post_delay": 3000,
         "timeout": -1,
         "focus": "",
         "next": [
@@ -227,22 +233,6 @@
             "position": {
                 "x": 301,
                 "y": 30
-            }
-        }
-    },
-    "$__mpe_external_战斗场景_开始游戏": {
-        "$__mpe_code": {
-            "position": {
-                "x": -12,
-                "y": -691
-            }
-        }
-    },
-    "$__mpe_external_地图场景_开始游戏": {
-        "$__mpe_code": {
-            "position": {
-                "x": -10,
-                "y": -818
             }
         }
     }

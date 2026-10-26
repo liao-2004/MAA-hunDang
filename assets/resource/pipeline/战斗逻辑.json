@@ -3,17 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793014347843,
+            "lastSyncTime": 1793019676985,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\战斗逻辑.json",
             "savedViewport": {
-                "x": -441,
-                "y": 128,
-                "zoom": 0.57
+                "x": -417,
+                "y": 139,
+                "zoom": 0.65
             },
             "filename": "战斗逻辑",
             "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_点击空白关闭_战斗逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2781,
+                "y": 457
+            }
         }
     },
     "$__mpe_external_留下遗物_战斗逻辑": {
@@ -40,11 +48,19 @@
             }
         }
     },
-    "$__mpe_external_放弃_战斗逻辑": {
+    "$__mpe_external_结束探索_战斗逻辑": {
         "$__mpe_code": {
             "position": {
-                "x": 2044,
-                "y": 317
+                "x": 2808,
+                "y": 613
+            }
+        }
+    },
+    "$__mpe_external_继续_战斗逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2719,
+                "y": 381
             }
         }
     },
@@ -70,17 +86,20 @@
         "on_error": [
             "离开地点",
             "同化",
-            "放弃",
+            "弃牌",
             "终结",
             "复活",
             "黄金事件",
             "留下遗物",
-            "卡死-结束脱离"
+            "卡死-结束脱离",
+            "继续",
+            "点击空白关闭",
+            "结束探索"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1218,
-                "y": 579
+                "x": 1229,
+                "y": 571
             }
         }
     },
@@ -115,8 +134,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2008,
-                "y": 388
+                "x": 1895,
+                "y": 354
             }
         }
     },
@@ -166,8 +185,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1986,
-                "y": 91
+                "x": 1978,
+                "y": 28
             }
         }
     },
@@ -294,12 +313,14 @@
             }
         },
         "next": [
-            "放弃"
+            "继续",
+            "点击空白关闭",
+            "结束探索"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1277,
-                "y": -214
+                "x": 1358,
+                "y": -178
             }
         }
     },
@@ -434,8 +455,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1374,
-                "y": -111
+                "x": 1340,
+                "y": -89
             }
         }
     },
@@ -613,8 +634,44 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2372,
-                "y": 270
+                "x": 2476,
+                "y": 157
+            }
+        }
+    },
+    "弃牌": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    664,
+                    346,
+                    176,
+                    79
+                ],
+                "template": [
+                    "战斗场景/虚质生命.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    610,
+                    580,
+                    33,
+                    32
+                ]
+            }
+        },
+        "next": [
+            "同化确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1604,
+                "y": 208
             }
         }
     }
