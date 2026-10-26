@@ -3,13 +3,53 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1793025699565,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\战斗逻辑.json",
             "savedViewport": {
-                "x": 98,
-                "y": 327,
-                "zoom": 0.53
+                "x": -18,
+                "y": 255,
+                "zoom": 0.49
             },
             "filename": "战斗逻辑",
             "version": "v2.1.0"
+        }
+    },
+    "融化黄金": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    748,
+                    192,
+                    181,
+                    72
+                ],
+                "template": [
+                    "战斗场景/融化的黄金.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    792,
+                    463,
+                    31,
+                    19
+                ]
+            }
+        },
+        "next": [
+            "自动战斗点击前点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 771,
+                "y": 459
+            }
         }
     },
     "$__mpe_external_留下遗物_战斗逻辑": {
@@ -221,8 +261,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2359,
-                "y": -131
+                "x": 2245,
+                "y": -169
             }
         }
     },
@@ -358,8 +398,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 305,
-                "y": 235
+                "x": -33,
+                "y": 276
             }
         }
     },
@@ -491,12 +531,13 @@
         ],
         "on_error": [
             "复活1",
+            "融化黄金",
             "卡死-结束脱离"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 638,
-                "y": 16
+                "x": 644,
+                "y": -102
             }
         }
     },
@@ -569,8 +610,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2311,
-                "y": 155
+                "x": 2342,
+                "y": 279
             }
         }
     }
