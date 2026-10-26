@@ -4,8 +4,8 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -418,
-                "y": 595,
+                "x": 515,
+                "y": 496,
                 "zoom": 0.53
             },
             "filename": "开始游戏",
@@ -216,13 +216,14 @@
         },
         "repeat": 4,
         "repeat_delay": 1000,
+        "timeout": -1,
         "next": [
             "启动祭坛"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 350,
-                "y": 52
+                "x": 301,
+                "y": 30
             }
         }
     }
