@@ -3,14 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1792951244294,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\战斗逻辑.json",
             "savedViewport": {
-                "x": -355,
-                "y": 218,
-                "zoom": 0.75
+                "x": -118,
+                "y": 316,
+                "zoom": 0.4
             },
             "filename": "战斗逻辑",
             "version": "v2.1.0"
@@ -112,8 +108,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1955,
-                "y": 291
+                "x": 2078,
+                "y": 306
             }
         }
     },
@@ -159,12 +155,12 @@
         },
         "next": [
             "同化完成判断",
-            "自动战斗"
+            "自动战斗点击前点击"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2304,
-                "y": 164
+                "x": 1900,
+                "y": 112
             }
         }
     },
@@ -187,12 +183,12 @@
             "type": "Click"
         },
         "next": [
-            "自动战斗"
+            "自动战斗点击前点击"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2044,
-                "y": 741
+                "x": 1849,
+                "y": 728
             }
         }
     },
@@ -219,7 +215,7 @@
         "timeout": 3000,
         "rate_limit": 0,
         "next": [
-            "自动战斗"
+            "自动战斗点击前点击"
         ],
         "$__mpe_code": {
             "position": {
@@ -335,8 +331,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 734,
-                "y": 473
+                "x": 666,
+                "y": 390
             }
         }
     },
@@ -432,8 +428,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1369,
-                "y": 22
+                "x": 1462,
+                "y": -23
             }
         }
     },
@@ -467,8 +463,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1146,
-                "y": -30
+                "x": 1161,
+                "y": 15
             }
         }
     },
@@ -498,8 +494,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 782,
-                "y": 80
+                "x": 790,
+                "y": 71
             }
         }
     },
