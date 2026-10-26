@@ -3,14 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1792927602847,
-            "isModifiedExternally": true,
-            "isDeleted": false,
-            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\开始游戏.json",
             "savedViewport": {
-                "x": -127,
-                "y": 561,
-                "zoom": 0.74
+                "x": -418,
+                "y": 595,
+                "zoom": 0.53
             },
             "filename": "开始游戏",
             "version": "v2.1.0"
@@ -97,11 +93,12 @@
         },
         "rate_limit": 3000,
         "next": [
+            "启动祭坛",
             "滑动难度"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 792,
+                "x": 703,
                 "y": -174
             }
         }
@@ -174,8 +171,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1078,
-                "y": -149
+                "x": 1150,
+                "y": -184
             }
         }
     },
@@ -224,8 +221,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 365,
-                "y": 58
+                "x": 350,
+                "y": 52
             }
         }
     }
