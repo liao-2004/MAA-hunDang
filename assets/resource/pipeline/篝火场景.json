@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -526,
-                "y": 317,
-                "zoom": 0.61
+                "x": -263,
+                "y": 239,
+                "zoom": 0.8
             },
             "filename": "篝火场景",
             "version": "v2.1.0"
@@ -339,22 +339,7 @@
             }
         }
     },
-    "篝火场景": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    35,
-                    35,
-                    249,
-                    124
-                ],
-                "template": [
-                    "篝火.png",
-                    "篝火事件/小篝火.png"
-                ]
-            }
-        },
+    "篝火场景点击": {
         "pre_delay": 2500,
         "action": {
             "type": "Click",
@@ -367,7 +352,7 @@
                 ]
             }
         },
-        "repeat": 3,
+        "repeat": 2,
         "repeat_delay": 500,
         "next": [
             "护符1",
@@ -406,6 +391,46 @@
             "position": {
                 "x": 1539,
                 "y": 694
+            }
+        }
+    },
+    "篝火场景": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    35,
+                    35,
+                    249,
+                    124
+                ],
+                "template": [
+                    "篝火.png",
+                    "篝火事件/小篝火.png"
+                ]
+            }
+        },
+        "pre_delay": 2500,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    134,
+                    481,
+                    92,
+                    36
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 500,
+        "next": [
+            "篝火场景点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 797,
+                "y": 133
             }
         }
     }
