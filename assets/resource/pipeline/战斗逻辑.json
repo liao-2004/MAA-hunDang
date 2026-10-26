@@ -3,10 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1793013277199,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\战斗逻辑.json",
             "savedViewport": {
-                "x": 98,
-                "y": 327,
-                "zoom": 0.53
+                "x": -665,
+                "y": 113,
+                "zoom": 0.57
             },
             "filename": "战斗逻辑",
             "version": "v2.1.0"
@@ -60,6 +64,7 @@
         "next": [
             "复活1",
             "黄金事件_副本1",
+            "融化的黄金",
             "战斗中"
         ],
         "on_error": [
@@ -330,8 +335,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 374,
-                "y": 490
+                "x": 701,
+                "y": 506
             }
         }
     },
@@ -358,8 +363,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 305,
-                "y": 235
+                "x": 150,
+                "y": 399
             }
         }
     },
@@ -421,6 +426,7 @@
         "next": [
             "复活1",
             "黄金事件_副本1",
+            "融化的黄金",
             "战斗中"
         ],
         "on_error": [
@@ -459,13 +465,14 @@
         ],
         "on_error": [
             "复活1",
-            "[JumpBack]黄金事件_副本1",
+            "黄金事件_副本1",
+            "融化的黄金",
             "卡死-结束脱离"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 993,
-                "y": -70
+                "x": 986,
+                "y": -194
             }
         }
     },
@@ -487,7 +494,8 @@
         "rate_limit": 0,
         "next": [
             "自动战斗",
-            "黄金事件_副本1"
+            "黄金事件_副本1",
+            "融化的黄金"
         ],
         "on_error": [
             "复活1",
@@ -569,8 +577,44 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2311,
-                "y": 155
+                "x": 2372,
+                "y": 270
+            }
+        }
+    },
+    "融化的黄金": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    762,
+                    192,
+                    170,
+                    75
+                ],
+                "template": [
+                    "融化的黄金.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    793,
+                    467,
+                    22,
+                    14
+                ]
+            }
+        },
+        "next": [
+            "自动战斗点击前点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2403,
+                "y": 568
             }
         }
     }
