@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 515,
-                "y": 496,
-                "zoom": 0.53
+                "x": -17,
+                "y": 484,
+                "zoom": 0.61
             },
             "filename": "开始游戏",
             "version": "v2.1.0"
@@ -29,12 +29,15 @@
         }
     },
     "===开始===": {
+        "timeout": 60000,
         "next": [
             "启动游戏",
             "返回公告",
             "进入游戏",
             "启动祭坛",
-            "滑动难度"
+            "滑动难度",
+            "战斗场景",
+            "地图场景"
         ],
         "$__mpe_code": {
             "position": {
@@ -224,6 +227,22 @@
             "position": {
                 "x": 301,
                 "y": 30
+            }
+        }
+    },
+    "$__mpe_external_战斗场景_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": -12,
+                "y": -691
+            }
+        }
+    },
+    "$__mpe_external_地图场景_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": -10,
+                "y": -818
             }
         }
     }

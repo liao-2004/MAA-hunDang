@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -263,
-                "y": 239,
-                "zoom": 0.8
+                "x": -369,
+                "y": 160,
+                "zoom": 0.92
             },
             "filename": "篝火场景",
             "version": "v2.1.0"
@@ -340,7 +340,6 @@
         }
     },
     "篝火场景点击": {
-        "pre_delay": 2500,
         "action": {
             "type": "Click",
             "param": {
@@ -410,7 +409,7 @@
                 ]
             }
         },
-        "pre_delay": 2500,
+        "pre_delay": 2000,
         "action": {
             "type": "Click",
             "param": {
