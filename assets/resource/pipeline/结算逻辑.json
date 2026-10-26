@@ -3,43 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1792951015123,
-            "isModifiedExternally": true,
+            "lastSyncTime": 1793014841201,
+            "isModifiedExternally": false,
             "isDeleted": false,
-            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\结算逻辑.json",
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\结算逻辑.json",
             "savedViewport": {
-                "x": -2506,
-                "y": 181,
-                "zoom": 0.75
+                "x": -1328,
+                "y": 113,
+                "zoom": 0.57
             },
             "filename": "结算逻辑",
             "version": "v2.1.0"
-        }
-    },
-    "黑屏": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    886,
-                    346,
-                    75,
-                    41
-                ]
-            }
-        },
-        "repeat": 3,
-        "repeat_delay": 500,
-        "next": [
-            "留下遗物",
-            "继续",
-            "点击空白关闭"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2791,
-                "y": 611
-            }
         }
     },
     "$__mpe_external_启动祭坛_结算逻辑": {
@@ -47,20 +21,6 @@
             "position": {
                 "x": 4379,
                 "y": 378
-            }
-        }
-    },
-    "失败": {
-        "next": [
-            "终结",
-            "留下遗物",
-            "继续",
-            "点击空白关闭"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2650,
-                "y": -60
             }
         }
     },
@@ -93,8 +53,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3603,
-                "y": 436
+                "x": 3499,
+                "y": 360
             }
         }
     },
@@ -212,8 +172,49 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3249,
-                "y": 724
+                "x": 3180,
+                "y": 447
+            }
+        }
+    },
+    "黑屏": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    886,
+                    346,
+                    75,
+                    41
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 500,
+        "next": [
+            "黑屏",
+            "留下遗物",
+            "继续",
+            "点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2791,
+                "y": 611
+            }
+        }
+    },
+    "放弃": {
+        "next": [
+            "继续",
+            "点击空白关闭",
+            "结束探索",
+            "黑屏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3274,
+                "y": 862
             }
         }
     }

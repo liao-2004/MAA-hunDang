@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793013277199,
+            "lastSyncTime": 1793014347843,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\战斗逻辑.json",
             "savedViewport": {
-                "x": -665,
-                "y": 113,
+                "x": -441,
+                "y": 128,
                 "zoom": 0.57
             },
             "filename": "战斗逻辑",
@@ -20,7 +20,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 2045,
-                "y": 659
+                "y": 678
             }
         }
     },
@@ -35,16 +35,16 @@
     "$__mpe_external_终结_战斗逻辑": {
         "$__mpe_code": {
             "position": {
-                "x": 2068,
-                "y": 546
+                "x": 2047,
+                "y": 534
             }
         }
     },
-    "$__mpe_external_继续_战斗逻辑": {
+    "$__mpe_external_放弃_战斗逻辑": {
         "$__mpe_code": {
             "position": {
-                "x": 2073,
-                "y": 464
+                "x": 2044,
+                "y": 317
             }
         }
     },
@@ -70,7 +70,7 @@
         "on_error": [
             "离开地点",
             "同化",
-            "继续",
+            "放弃",
             "终结",
             "复活",
             "黄金事件",
@@ -166,8 +166,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1900,
-                "y": 112
+                "x": 1986,
+                "y": 91
             }
         }
     },
@@ -294,7 +294,7 @@
             }
         },
         "next": [
-            "继续"
+            "放弃"
         ],
         "$__mpe_code": {
             "position": {
@@ -355,7 +355,7 @@
                 ]
             }
         },
-        "timeout": 1000,
+        "timeout": -1,
         "focus": "",
         "next": [
             "粪怪",
@@ -508,6 +508,42 @@
             }
         }
     },
+    "融化的黄金": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    762,
+                    192,
+                    170,
+                    75
+                ],
+                "template": [
+                    "战斗场景/融化的黄金.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    793,
+                    467,
+                    22,
+                    14
+                ]
+            }
+        },
+        "next": [
+            "自动战斗点击前点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2403,
+                "y": 568
+            }
+        }
+    },
     "黄金事件": {
         "recognition": {
             "type": "TemplateMatch",
@@ -579,42 +615,6 @@
             "position": {
                 "x": 2372,
                 "y": 270
-            }
-        }
-    },
-    "融化的黄金": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    762,
-                    192,
-                    170,
-                    75
-                ],
-                "template": [
-                    "融化的黄金.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    793,
-                    467,
-                    22,
-                    14
-                ]
-            }
-        },
-        "next": [
-            "自动战斗点击前点击"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2403,
-                "y": 568
             }
         }
     }
