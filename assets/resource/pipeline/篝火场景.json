@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793113927221,
+            "lastSyncTime": 1793114484641,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\篝火场景.json",
             "savedViewport": {
-                "x": -492,
-                "y": 156,
-                "zoom": 0.75
+                "x": -481,
+                "y": 240,
+                "zoom": 0.57
             },
             "filename": "篝火场景",
             "version": "v2.1.0"
@@ -27,8 +27,8 @@
     "$__mpe_external_选择卡片_篝火场景": {
         "$__mpe_code": {
             "position": {
-                "x": 1698,
-                "y": -315
+                "x": 1702,
+                "y": -298
             }
         }
     },
@@ -92,8 +92,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1657,
-                "y": -36
+                "x": 1658,
+                "y": -15
             }
         }
     },
@@ -359,27 +359,13 @@
                 ]
             }
         },
-        "pre_delay": 2000,
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    134,
-                    481,
-                    92,
-                    36
-                ]
-            }
-        },
-        "repeat": 3,
-        "repeat_delay": 500,
         "next": [
             "篝火场景点击"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 797,
-                "y": 133
+                "y": 172
             }
         }
     },
