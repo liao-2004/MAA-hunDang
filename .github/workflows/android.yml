@@ -156,14 +156,17 @@ jobs:
 
       - name: Build APK
         working-directory: Android/MaaFwApp
-        env:
-          KEYSTORE_PATH: ${{ github.workspace }}/release.jks
-          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           set +e
           chmod +x ./gradlew
+          # 仅当 release.jks 真的解码出来时才配置签名，否则 MaaFwApp 走未签名 release，
+          # 避免 validateSigningRelease 因文件缺失而失败
+          if [ -f "${{ github.workspace }}/release.jks" ]; then
+            export KEYSTORE_PATH="${{ github.workspace }}/release.jks"
+            export KEYSTORE_PASSWORD="${{ secrets.ANDROID_KEYSTORE_PASSWORD }}"
+            export KEY_ALIAS="${{ secrets.ANDROID_KEY_ALIAS }}"
+            export KEY_PASSWORD="${{ secrets.ANDROID_KEY_PASSWORD }}"
+          fi
           if [ "$ASSEMBLE" = "release" ]; then
             ./gradlew clean :app:assembleRelease --no-daemon --stacktrace > build.log 2>&1
             rc=$?
