@@ -452,3 +452,10 @@ tools/ImageCropper/**/*.png
 
 config
 debug
+
+# Android（MaaFwApp）出包：MaaCommonAssets submodule 铺进 assets/resource 的 OCR、以及构建产物
+assets/resource/model/ocr/
+Android/MaaFwApp/
+Android/agent-dist/
+Android/release.jks
+.apk

@@ -1,0 +1,30 @@
+# Android 打包配方（MaaFwApp）。相对路径相对本文件所在目录（Android/）。
+#
+# 参考 MRA 的 Android/profile.yaml：MaaFwApp 作为子模块在 Android/MaaFwApp，
+# 配方与资源目录都在仓库根下，本地与 CI 共用同一份。
+#
+# 差异说明（对照 MRA）：
+#   - MAA-hunDang 不启用 agent（assets/interface.json 里 agent 段注释），
+#     故配方没有 agent: 段，CI 也不下载 agent 内核 / 不打 agent 运行时。
+#   - 仓库没有 logo 图标，故 app 不写 icon，直接用 MaaFwApp 自带默认图标。
+#   - 资源根就是 assets/（含 interface.json 那一层），直接指 ../assets。
+#     注意：仓库根的 docs/、LICENSE 不在 assets/ 下，也未铺进 assets/，
+#     故 include 只列 assets/ 里真实存在的条目。
+
+# 含 interface.json 那一层
+assets: ../assets
+
+# 进包白名单，相对 assets 目录。写了 include 即整体替换默认值。
+include:
+  - interface.json
+  - resource/**
+  - config/**
+
+# 无需排除
+exclude: []
+
+# 包名拼成 com.aliothmoon.maafw.hundang（id 只收小写包段）。
+# 不写 icon：用 MaaFwApp 自带默认图标。
+app:
+  id: hundang
+  label: 深境
