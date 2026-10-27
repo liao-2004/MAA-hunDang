@@ -3,10 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1793113927221,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\篝火场景.json",
             "savedViewport": {
-                "x": -368,
-                "y": 374,
-                "zoom": 0.8
+                "x": -492,
+                "y": 156,
+                "zoom": 0.75
             },
             "filename": "篝火场景",
             "version": "v2.1.0"
@@ -339,7 +343,61 @@
             }
         }
     },
+    "篝火场景": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    35,
+                    35,
+                    249,
+                    124
+                ],
+                "template": [
+                    "篝火.png",
+                    "篝火事件/小篝火.png"
+                ]
+            }
+        },
+        "pre_delay": 2000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    134,
+                    481,
+                    92,
+                    36
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 500,
+        "next": [
+            "篝火场景点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 797,
+                "y": 133
+            }
+        }
+    },
     "篝火场景点击": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1065,
+                    422,
+                    181,
+                    178
+                ],
+                "template": [
+                    "事件逻辑/离开地点.png"
+                ]
+            }
+        },
         "action": {
             "type": "Click",
             "param": {
@@ -390,46 +448,6 @@
             "position": {
                 "x": 1539,
                 "y": 694
-            }
-        }
-    },
-    "篝火场景": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    35,
-                    35,
-                    249,
-                    124
-                ],
-                "template": [
-                    "篝火.png",
-                    "篝火事件/小篝火.png"
-                ]
-            }
-        },
-        "pre_delay": 2000,
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    134,
-                    481,
-                    92,
-                    36
-                ]
-            }
-        },
-        "repeat": 3,
-        "repeat_delay": 500,
-        "next": [
-            "篝火场景点击"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 797,
-                "y": 133
             }
         }
     }
