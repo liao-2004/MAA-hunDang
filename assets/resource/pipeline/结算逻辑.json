@@ -3,43 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1792951015123,
+            "lastSyncTime": 1793114955334,
             "isModifiedExternally": true,
             "isDeleted": false,
-            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\结算逻辑.json",
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\结算逻辑.json",
             "savedViewport": {
-                "x": -2506,
-                "y": 181,
-                "zoom": 0.75
+                "x": -1104,
+                "y": 111,
+                "zoom": 0.43
             },
             "filename": "结算逻辑",
             "version": "v2.1.0"
-        }
-    },
-    "黑屏": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    886,
-                    346,
-                    75,
-                    41
-                ]
-            }
-        },
-        "repeat": 3,
-        "repeat_delay": 500,
-        "next": [
-            "留下遗物",
-            "继续",
-            "点击空白关闭"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2791,
-                "y": 611
-            }
         }
     },
     "$__mpe_external_启动祭坛_结算逻辑": {
@@ -93,8 +67,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3603,
-                "y": 436
+                "x": 3683,
+                "y": 528
             }
         }
     },
@@ -179,12 +153,13 @@
         "focus": "游戏结束",
         "next": [
             "启动祭坛",
-            "点击空白关闭"
+            "点击空白关闭",
+            "结束探索"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4012,
-                "y": 176
+                "x": 4025,
+                "y": 119
             }
         }
     },
@@ -212,8 +187,34 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3249,
-                "y": 724
+                "x": 3257,
+                "y": 735
+            }
+        }
+    },
+    "黑屏": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    886,
+                    346,
+                    75,
+                    41
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 500,
+        "next": [
+            "留下遗物",
+            "继续",
+            "点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2804,
+                "y": 586
             }
         }
     }
