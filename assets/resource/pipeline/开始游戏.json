@@ -68,16 +68,16 @@
     },
     "启动游戏": {
         "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "hzsj.png"
-            }
+            "type": "DirectHit",
+            "param": {}
         },
         "action": {
-            "type": "Click"
+            "type": "StartApp",
+            "param": {
+                "package": "com.chillyroom.containerofsoul"
+            }
         },
         "timeout": 80000,
-        "rate_limit": 3000,
         "next": [
             "返回公告",
             "进入游戏"
