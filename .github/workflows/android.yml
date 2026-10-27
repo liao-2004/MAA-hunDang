@@ -162,20 +162,26 @@ jobs:
           KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
+          set +e
           chmod +x ./gradlew
           if [ "$ASSEMBLE" = "release" ]; then
-            ./gradlew clean :app:assembleRelease --no-daemon
+            ./gradlew clean :app:assembleRelease --no-daemon --stacktrace > build.log 2>&1
+            rc=$?
             variant=release
             arch=universal
           else
-            ./gradlew clean :app:assembleDebug --no-daemon
+            ./gradlew clean :app:assembleDebug --no-daemon --stacktrace > build.log 2>&1
+            rc=$?
             variant=debug
             arch=arm64-v8a
           fi
-          out="${GITHUB_WORKSPACE}/apk-out"
-          mkdir -p "$out"
-          apk=$(find app/build/outputs/apk/$variant -name "*.apk" | head -n 1)
-          cp "$apk" "$out/MAA-hunDang-android-${arch}-MFWAPP-${{ needs.meta.outputs.tag }}.apk"
+          mkdir -p "${GITHUB_WORKSPACE}/apk-out"
+          apk=$(find app/build/outputs/apk/$variant -name "*.apk" 2>/dev/null | head -n 1)
+          if [ -n "$apk" ]; then
+            cp "$apk" "${GITHUB_WORKSPACE}/apk-out/MAA-hunDang-android-${arch}-MFWAPP-${{ needs.meta.outputs.tag }}.apk"
+          fi
+          cp build.log "${GITHUB_WORKSPACE}/apk-out/build.log" 2>/dev/null
+          exit $rc
 
       - uses: actions/upload-artifact@v4
         with:
