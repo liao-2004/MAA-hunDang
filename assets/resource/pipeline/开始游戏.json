@@ -3,13 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1793117086014,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\开始游戏.json",
             "savedViewport": {
-                "x": -17,
-                "y": 484,
-                "zoom": 0.61
+                "x": -741,
+                "y": 385,
+                "zoom": 0.99
             },
             "filename": "开始游戏",
             "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_地图场景_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": -10,
+                "y": -818
+            }
         }
     },
     "$__mpe_external_宝石收集者_开始游戏": {
@@ -17,6 +29,14 @@
             "position": {
                 "x": 1794,
                 "y": -101
+            }
+        }
+    },
+    "$__mpe_external_战斗场景_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": -12,
+                "y": -691
             }
         }
     },
@@ -135,7 +155,7 @@
         "repeat": 2,
         "post_delay": 6000,
         "timeout": -1,
-        "focus": "",
+        "focus": "开始游戏",
         "next": [
             "宝石收集者",
             "离开地点"
@@ -169,6 +189,7 @@
         },
         "repeat": 3,
         "repeat_delay": 1000,
+        "focus": "滑动",
         "next": [
             "坠入深境"
         ],
@@ -227,22 +248,6 @@
             "position": {
                 "x": 301,
                 "y": 30
-            }
-        }
-    },
-    "$__mpe_external_战斗场景_开始游戏": {
-        "$__mpe_code": {
-            "position": {
-                "x": -12,
-                "y": -691
-            }
-        }
-    },
-    "$__mpe_external_地图场景_开始游戏": {
-        "$__mpe_code": {
-            "position": {
-                "x": -10,
-                "y": -818
             }
         }
     }
