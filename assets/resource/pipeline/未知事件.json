@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793014336814,
+            "lastSyncTime": 1793207888067,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\未知事件.json",
             "savedViewport": {
-                "x": 43,
-                "y": 61,
-                "zoom": 0.98
+                "x": 15,
+                "y": 153,
+                "zoom": 0.85
             },
             "filename": "未知事件",
             "version": "v2.1.0"
@@ -21,6 +21,14 @@
             "position": {
                 "x": 782,
                 "y": 293
+            }
+        }
+    },
+    "$__mpe_external_战斗场景_未知事件": {
+        "$__mpe_code": {
+            "position": {
+                "x": 778,
+                "y": 374
             }
         }
     },
@@ -35,24 +43,32 @@
     "$__mpe_external_终结_未知事件": {
         "$__mpe_code": {
             "position": {
-                "x": 785,
-                "y": 369
+                "x": 786,
+                "y": 464
             }
         }
     },
     "$__mpe_external_统合_未知事件": {
         "$__mpe_code": {
             "position": {
-                "x": 784,
-                "y": 433
+                "x": 736,
+                "y": 567
+            }
+        }
+    },
+    "$__mpe_external_选择卡片_未知事件": {
+        "$__mpe_code": {
+            "position": {
+                "x": 782,
+                "y": 136
             }
         }
     },
     "$__mpe_external_选择卡牌移除_未知事件": {
         "$__mpe_code": {
             "position": {
-                "x": 792,
-                "y": 99
+                "x": 790,
+                "y": 63
             }
         }
     },
@@ -88,7 +104,9 @@
         "next": [
             "离开地点",
             "选择卡牌移除",
+            "选择卡片",
             "印记刻印(1.1)",
+            "战斗场景",
             "终结",
             "未知事件"
         ],

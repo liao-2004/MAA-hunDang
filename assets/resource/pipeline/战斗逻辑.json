@@ -3,45 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793114140991,
+            "lastSyncTime": 1793200343075,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\战斗逻辑.json",
             "savedViewport": {
-                "x": -209,
-                "y": 274,
-                "zoom": 0.97
+                "x": -451,
+                "y": -53,
+                "zoom": 0.74
             },
             "filename": "战斗逻辑",
             "version": "v2.1.0"
-        }
-    },
-    "源力消耗": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    25,
-                    352,
-                    84,
-                    82
-                ],
-                "template": [
-                    "战斗场景/源力退出.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "自动战斗点击前点击"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1010,
-                "y": 177
-            }
         }
     },
     "$__mpe_external_留下遗物_战斗逻辑": {
@@ -102,6 +74,7 @@
             "复活",
             "黄金事件",
             "留下遗物",
+            "地图场景",
             "卡死-结束脱离"
         ],
         "$__mpe_code": {
@@ -395,6 +368,34 @@
             }
         }
     },
+    "源力消耗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    25,
+                    352,
+                    84,
+                    82
+                ],
+                "template": [
+                    "战斗场景/源力退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "自动战斗点击前点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1010,
+                "y": 177
+            }
+        }
+    },
     "粪怪": {
         "recognition": {
             "type": "TemplateMatch",
@@ -641,6 +642,14 @@
             "position": {
                 "x": 2342,
                 "y": 279
+            }
+        }
+    },
+    "$__mpe_external_地图场景_战斗逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1851,
+                "y": 936
             }
         }
     }
