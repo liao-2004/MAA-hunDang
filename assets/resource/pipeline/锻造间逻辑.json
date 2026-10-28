@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1792946293254,
-            "isModifiedExternally": true,
+            "lastSyncTime": 1793198641110,
+            "isModifiedExternally": false,
             "isDeleted": false,
-            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\锻造间逻辑.json",
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\锻造间逻辑.json",
             "savedViewport": {
-                "x": -5569,
-                "y": -2223,
-                "zoom": 0.99
+                "x": -3608,
+                "y": -1783,
+                "zoom": 0.74
             },
             "filename": "锻造间逻辑",
             "version": "v2.1.0"
@@ -25,6 +25,7 @@
         }
     },
     "卡牌升变": {
+        "pre_delay": 0,
         "action": {
             "type": "Click",
             "param": {
@@ -36,7 +37,8 @@
                 ]
             }
         },
-        "timeout": 3000,
+        "post_delay": 0,
+        "timeout": 18000,
         "next": [
             "是否升变"
         ],
@@ -97,7 +99,7 @@
                 ]
             }
         },
-        "timeout": 6000,
+        "timeout": 1800,
         "next": [
             "识别卡牌"
         ],
@@ -129,7 +131,7 @@
         "action": {
             "type": "Click"
         },
-        "timeout": 3500,
+        "timeout": 1800,
         "next": [
             "卡牌升变"
         ],

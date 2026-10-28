@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793118517879,
+            "lastSyncTime": 1793182947008,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\篝火场景.json",
             "savedViewport": {
-                "x": -251,
-                "y": 282,
-                "zoom": 0.65
+                "x": -518,
+                "y": 145,
+                "zoom": 0.75
             },
             "filename": "篝火场景",
             "version": "v2.1.0"
@@ -93,8 +93,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1658,
-                "y": -15
+                "x": 1594,
+                "y": 69
             }
         }
     },

@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1792936793257,
+            "lastSyncTime": 1793014336814,
             "isModifiedExternally": false,
             "isDeleted": false,
-            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\未知事件.json",
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\未知事件.json",
             "savedViewport": {
-                "x": -64,
-                "y": 236,
-                "zoom": 0.86
+                "x": 43,
+                "y": 61,
+                "zoom": 0.98
             },
             "filename": "未知事件",
             "version": "v2.1.0"
@@ -29,6 +29,14 @@
             "position": {
                 "x": 794,
                 "y": 205
+            }
+        }
+    },
+    "$__mpe_external_终结_未知事件": {
+        "$__mpe_code": {
+            "position": {
+                "x": 785,
+                "y": 369
             }
         }
     },
@@ -81,7 +89,8 @@
             "离开地点",
             "选择卡牌移除",
             "印记刻印(1.1)",
-            "终结"
+            "终结",
+            "未知事件"
         ],
         "on_error": [
             "统合"
@@ -90,14 +99,6 @@
             "position": {
                 "x": 259,
                 "y": 111
-            }
-        }
-    },
-    "$__mpe_external_终结_未知事件": {
-        "$__mpe_code": {
-            "position": {
-                "x": 785,
-                "y": 369
             }
         }
     }

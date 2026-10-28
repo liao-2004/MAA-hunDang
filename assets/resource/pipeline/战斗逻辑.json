@@ -3,68 +3,60 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793025699565,
+            "lastSyncTime": 1793114140991,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\战斗逻辑.json",
             "savedViewport": {
-                "x": -18,
-                "y": 255,
-                "zoom": 0.49
+                "x": -209,
+                "y": 274,
+                "zoom": 0.97
             },
             "filename": "战斗逻辑",
             "version": "v2.1.0"
         }
     },
-    "融化黄金": {
+    "源力消耗": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    748,
-                    192,
-                    181,
-                    72
+                    25,
+                    352,
+                    84,
+                    82
                 ],
                 "template": [
-                    "战斗场景/融化的黄金.png"
+                    "战斗场景/源力退出.png"
                 ]
             }
         },
         "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    792,
-                    463,
-                    31,
-                    19
-                ]
-            }
+            "type": "Click"
         },
         "next": [
             "自动战斗点击前点击"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 771,
-                "y": 459
+                "x": 1010,
+                "y": 177
             }
         }
     },
     "$__mpe_external_留下遗物_战斗逻辑": {
         "$__mpe_code": {
             "position": {
-                "x": 2045,
-                "y": 659
+                "x": 2043,
+                "y": 662
             }
         }
     },
     "$__mpe_external_离开地点_战斗逻辑": {
         "$__mpe_code": {
             "position": {
-                "x": 2044,
-                "y": 622
+                "x": 2041,
+                "y": 593
             }
         }
     },
@@ -423,8 +415,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 530,
-                "y": -29
+                "x": 402,
+                "y": -213
             }
         }
     },
@@ -468,8 +460,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1374,
-                "y": -111
+                "x": 1383,
+                "y": -121
             }
         }
     },
@@ -504,8 +496,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 993,
-                "y": -70
+                "x": 978,
+                "y": -84
             }
         }
     },
@@ -527,7 +519,8 @@
         "rate_limit": 0,
         "next": [
             "自动战斗",
-            "黄金事件_副本1"
+            "黄金事件_副本1",
+            "源力消耗"
         ],
         "on_error": [
             "复活1",
@@ -536,8 +529,44 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 644,
-                "y": -102
+                "x": 625,
+                "y": -108
+            }
+        }
+    },
+    "融化黄金": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    748,
+                    192,
+                    181,
+                    72
+                ],
+                "template": [
+                    "战斗场景/融化的黄金.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    792,
+                    463,
+                    31,
+                    19
+                ]
+            }
+        },
+        "next": [
+            "自动战斗点击前点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 771,
+                "y": 459
             }
         }
     },

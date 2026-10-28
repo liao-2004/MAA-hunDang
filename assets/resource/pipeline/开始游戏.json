@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793117086014,
+            "lastSyncTime": 1793183071765,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\开始游戏.json",
             "savedViewport": {
-                "x": -741,
-                "y": 385,
-                "zoom": 0.99
+                "x": -419,
+                "y": 406,
+                "zoom": 0.75
             },
             "filename": "开始游戏",
             "version": "v2.1.0"
@@ -21,14 +21,6 @@
             "position": {
                 "x": -10,
                 "y": -818
-            }
-        }
-    },
-    "$__mpe_external_宝石收集者_开始游戏": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1794,
-                "y": -101
             }
         }
     },
@@ -131,10 +123,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    551,
-                    310,
-                    184,
-                    51
+                    532,
+                    271,
+                    227,
+                    117
                 ],
                 "template": [
                     "坠入深境.png"
@@ -153,12 +145,11 @@
             }
         },
         "repeat": 2,
-        "post_delay": 6000,
         "timeout": -1,
         "focus": "开始游戏",
         "next": [
-            "宝石收集者",
-            "离开地点"
+            "离开地点",
+            "坠入深境"
         ],
         "$__mpe_code": {
             "position": {
@@ -242,7 +233,8 @@
         "repeat_delay": 1000,
         "timeout": -1,
         "next": [
-            "启动祭坛"
+            "启动祭坛",
+            "进入游戏"
         ],
         "$__mpe_code": {
             "position": {
