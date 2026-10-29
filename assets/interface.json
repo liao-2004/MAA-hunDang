@@ -7,7 +7,7 @@
     "name": "Maa-hzsj",
     "contact": "QQ群: 123456789",
     "license": "MIT",
-    "welcome": "首次使用！欢迎使用 MAA!",
+    "welcome": "请不要在官方有关群里宣传该脚本",
     // 填写项目地址和版本号可实现自动更新功能
     "github": "https://github.com/MaaXYZ/MaaPracticeBoilerplate",
     "version": "1.0.1",
@@ -41,24 +41,61 @@
         {
             "name": "==开始游戏==",
             "entry": "===开始===",
-            "controller": [],
-            "resource": []
+            "controller": [
+                "安卓端"
+            ],
+            "resource": [
+                "官服"
+            ],
+            "option": [
+                "永久VIP"
+            ]
         },
         {
-            "name": "==每日爬塔==",
-            "entry": "===开始==="
-        },
-        {
-            "name": "==战斗内==",
-            "entry": "战斗场景",
-            "controller": [],
-            "resource": []
-        },
-        {
-            "name": "==地图内==",
-            "entry": "地图场景",
-            "controller": [],
-            "resource": []
+            "name": "==每日挑战==",
+            "entry": "===开始===",
+            "pipeline_override": {
+                "结束探索": {
+                    "next": [
+                        "前往观星室",
+                        "点击空白关闭",
+                        "结束探索"
+                    ]
+                },
+                "点击空白关闭": {
+                    "next": [
+                        "结束探索",
+                        "点击空白关闭",
+                        "前往观星室"
+                    ]
+                },
+                "进入游戏": {
+                    "next": [
+                        "前往观星室",
+                        "进入游戏"
+                    ]
+                },
+                "===开始===": {
+                    "next": [
+                        "启动游戏",
+                        "返回公告",
+                        "进入游戏",
+                        "前往观星室",
+                        "每日挑战-开始",
+                        "每日挑战",
+                        "统合"
+                    ]
+                }
+            },
+            "option": [
+                "永久VIP"
+            ],
+            "resource": [
+                "官服"
+            ],
+            "controller": [
+                "安卓端"
+            ]
         }
         // {
         //     "name": "选项任务",
@@ -81,6 +118,17 @@
         // }
     ],
     "label": "深境",
+    "option": {
+        "永久VIP": {
+            "type": "checkbox",
+            "cases": [
+                {
+                    "name": "默认"
+                }
+            ],
+            "label": "永久VIP"
+        }
+    },
     // "option": {
     //     "任务选项1": {
     //         "type": "select",

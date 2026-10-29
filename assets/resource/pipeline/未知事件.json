@@ -3,17 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793207888067,
+            "lastSyncTime": 1793208118364,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\未知事件.json",
             "savedViewport": {
-                "x": 15,
-                "y": 153,
+                "x": -88,
+                "y": 241,
                 "zoom": 0.85
             },
             "filename": "未知事件",
             "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_地图场景_未知事件": {
+        "$__mpe_code": {
+            "position": {
+                "x": 803,
+                "y": 387
+            }
         }
     },
     "$__mpe_external_印记刻印(1.1)_未知事件": {
@@ -27,8 +35,8 @@
     "$__mpe_external_战斗场景_未知事件": {
         "$__mpe_code": {
             "position": {
-                "x": 778,
-                "y": 374
+                "x": 784,
+                "y": 369
             }
         }
     },
@@ -51,8 +59,8 @@
     "$__mpe_external_统合_未知事件": {
         "$__mpe_code": {
             "position": {
-                "x": 736,
-                "y": 567
+                "x": 783,
+                "y": 569
             }
         }
     },
@@ -107,6 +115,7 @@
             "选择卡片",
             "印记刻印(1.1)",
             "战斗场景",
+            "地图场景",
             "终结",
             "未知事件"
         ],

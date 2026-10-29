@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1792946274675,
+            "lastSyncTime": 1793207703911,
             "isModifiedExternally": false,
             "isDeleted": false,
-            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\游艺事件.json",
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\游艺事件.json",
             "savedViewport": {
-                "x": 618,
-                "y": 354,
-                "zoom": 0.64
+                "x": 570,
+                "y": -164,
+                "zoom": 0.75
             },
             "filename": "游艺事件",
             "version": "v2.1.0"
@@ -90,7 +90,6 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "next": [
             "印记刻印(1.2)",
             "游艺-点击空白关闭"
@@ -114,7 +113,6 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "next": [
             "印记刻印(1.4)_副本2",
             "游艺-点击空白关闭"
@@ -138,7 +136,6 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "next": [
             "印记刻印(1.4)_副本3",
             "游艺-点击空白关闭"
@@ -162,7 +159,6 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "next": [
             "印记刻印(1.4)_副本4",
             "游艺-点击空白关闭"
@@ -186,7 +182,6 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "next": [
             "游艺-点击空白关闭",
             "刻印-退出"
@@ -210,7 +205,6 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "next": [
             "印记刻印(1.3)",
             "游艺-点击空白关闭"
@@ -234,7 +228,6 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "next": [
             "印记刻印(1.4)",
             "游艺-点击空白关闭"
@@ -258,7 +251,6 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "next": [
             "游艺-点击空白关闭",
             "印记刻印(1.4)_副本1"
@@ -725,8 +717,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 765,
-                "y": 179
+                "x": 702,
+                "y": 119
             }
         }
     },

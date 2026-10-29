@@ -3,33 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793183071765,
+            "lastSyncTime": 1793297538310,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\开始游戏.json",
             "savedViewport": {
-                "x": -419,
-                "y": 406,
+                "x": 33,
+                "y": 747,
                 "zoom": 0.75
             },
             "filename": "开始游戏",
             "version": "v2.1.0"
-        }
-    },
-    "$__mpe_external_地图场景_开始游戏": {
-        "$__mpe_code": {
-            "position": {
-                "x": -10,
-                "y": -818
-            }
-        }
-    },
-    "$__mpe_external_战斗场景_开始游戏": {
-        "$__mpe_code": {
-            "position": {
-                "x": -12,
-                "y": -691
-            }
         }
     },
     "$__mpe_external_离开地点_开始游戏": {
@@ -40,6 +24,14 @@
             }
         }
     },
+    "$__mpe_external_统合_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1,
+                "y": -846
+            }
+        }
+    },
     "===开始===": {
         "timeout": 60000,
         "next": [
@@ -47,14 +39,49 @@
             "返回公告",
             "进入游戏",
             "启动祭坛",
-            "滑动难度",
-            "战斗场景",
-            "地图场景"
+            "统合"
         ],
         "$__mpe_code": {
             "position": {
                 "x": -724,
                 "y": -716
+            }
+        }
+    },
+    "前往观星室": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1136,
+                    225,
+                    110,
+                    64
+                ],
+                "template": [
+                    "开始游戏/观星室.png"
+                ]
+            }
+        },
+        "pre_delay": 400,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1178,
+                    217,
+                    19,
+                    9
+                ]
+            }
+        },
+        "next": [
+            "每日挑战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 836,
+                "y": -632
             }
         }
     },
@@ -76,8 +103,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -45,
-                "y": -249
+                "x": -114,
+                "y": -174
             }
         }
     },
@@ -158,6 +185,64 @@
             }
         }
     },
+    "每日挑战": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    884,
+                    513,
+                    115,
+                    45
+                ],
+                "template": [
+                    "开始游戏/每日挑战.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "每日挑战-开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1096,
+                "y": -632
+            }
+        }
+    },
+    "每日挑战-开始": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "开始游戏/每日挑战-开始.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    622,
+                    590,
+                    17,
+                    20
+                ]
+            }
+        },
+        "next": [
+            "滑动难度"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1356,
+                "y": -632
+            }
+        }
+    },
     "滑动难度": {
         "action": {
             "type": "Swipe",
@@ -186,8 +271,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1150,
-                "y": -184
+                "x": 1158,
+                "y": -241
             }
         }
     },
