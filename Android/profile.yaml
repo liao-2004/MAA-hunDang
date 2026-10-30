@@ -1,0 +1,5 @@
+assets: ../assets
+app:
+  id: hundang
+  label: 深境助手
+  icon: icon.png
