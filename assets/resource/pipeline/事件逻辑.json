@@ -1,22 +1,18 @@
 {
-    "$__mpe_config_事件逻辑": {
+    "$__mpe_config_新建Pipeline2": {
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793291252821,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\事件逻辑.json",
             "savedViewport": {
-                "x": -977,
-                "y": -782,
-                "zoom": 0.8
+                "x": -1257,
+                "y": -428,
+                "zoom": 0.92
             },
-            "filename": "事件逻辑",
+            "filename": "新建Pipeline2",
             "version": "v2.1.0"
         }
     },
-    "$__mpe_external_地图场景_事件逻辑": {
+    "$__mpe_external_地图场景_新建Pipeline2": {
         "$__mpe_code": {
             "position": {
                 "x": 2483,
@@ -24,7 +20,7 @@
             }
         }
     },
-    "$__mpe_external_战斗场景_事件逻辑": {
+    "$__mpe_external_战斗场景_新建Pipeline2": {
         "$__mpe_code": {
             "position": {
                 "x": 2276,
@@ -32,7 +28,7 @@
             }
         }
     },
-    "$__mpe_external_未知事件_事件逻辑": {
+    "$__mpe_external_未知事件_新建Pipeline2": {
         "$__mpe_code": {
             "position": {
                 "x": 2533,
@@ -40,7 +36,7 @@
             }
         }
     },
-    "$__mpe_external_游艺-点击空白关闭_事件逻辑": {
+    "$__mpe_external_游艺-点击空白关闭_新建Pipeline2": {
         "$__mpe_code": {
             "position": {
                 "x": 3205,
@@ -48,7 +44,7 @@
             }
         }
     },
-    "$__mpe_external_游艺事件_事件逻辑": {
+    "$__mpe_external_游艺事件_新建Pipeline2": {
         "$__mpe_code": {
             "position": {
                 "x": 1594,
@@ -56,7 +52,7 @@
             }
         }
     },
-    "$__mpe_external_统合_事件逻辑": {
+    "$__mpe_external_统合_新建Pipeline2": {
         "$__mpe_code": {
             "position": {
                 "x": 2524,
@@ -315,8 +311,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2082,
-                "y": 802
+                "x": 2087,
+                "y": 795
             }
         }
     },
@@ -378,7 +374,8 @@
         "repeat_delay": 600,
         "timeout": 1200,
         "next": [
-            "直接离开-红框"
+            "直接离开-红框",
+            "离开地点"
         ],
         "on_error": [
             "地图场景",
@@ -386,8 +383,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1627,
-                "y": 582
+                "x": 1670,
+                "y": 669
             }
         }
     },
@@ -429,7 +426,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 1678,
-                "y": 1029
+                "y": 1061
             }
         }
     },

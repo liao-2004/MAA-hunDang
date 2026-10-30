@@ -452,3 +452,5 @@ tools/ImageCropper/**/*.png
 
 config
 debug
+# 自带独立git仓库的Android应用，避免影响出包，不上传
+Android/MaaFwApp/
