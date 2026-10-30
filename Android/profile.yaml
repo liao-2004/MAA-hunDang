@@ -1,0 +1,47 @@
+# PI 打包配方样例
+# 拷一份改成自己的放仓库外，再在 local.properties 里写 pi.profile=<绝对路径>（或设 PI_PROFILE）
+# 相对路径相对本文件；字符串支持 ${VAR} / ${VAR:-回落}（含 ${} 的值在 YAML 里要加引号）
+# 字段语义见 build-logic 的 BuildProfile.kt
+
+# 含 interface.json 那一层
+assets: ../assets
+
+# 进包白名单，省略则用内置默认值；写了就是整体替换
+# PI 各级声明的 icon 也要落在这份白名单里，否则图标文件不进包，运行时静默不显示
+include:
+  - interface.json
+  - tasks/**
+  - resource/**
+  - resource_*/**
+  - data/**
+  - locales/**
+  - CONTACT
+  - LICENSE
+
+# 压在 include 之上，用来挖掉大而用不上的资源
+exclude: []
+
+logs:
+  include:
+    - debug/**/*.log
+
+# 运行在哪块屏上；整段可省略 = 前台、后台两种模式都有，后台用内置 720P@240dpi、1080P@280dpi
+display:
+  # 是否提供前台模式；缺省 true，写 false 只留后台模式（Android 10 以下用不了）
+  foreground: true
+  # 后台模式虚拟屏的分辨率预设；写了就整体替换内置两档，第一项是默认；只收横屏（width > height），dpi 在 120～640
+  presets:
+    # label 可选，缺省为「短边P」
+    - label: 720P
+      width: 1280
+      height: 720
+      dpi: 240
+    - width: 1920
+      height: 1080
+      dpi: 280
+
+# 整段可省略 = 用本仓库自己的包名与图标
+app:
+  # 包名后缀，拼成 com.aliothmoon.maafw.yourpi；只收小写包段
+  id: MAA-hunDang
+  label: MAA-hunDang
