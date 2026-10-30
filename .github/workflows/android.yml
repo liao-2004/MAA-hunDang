@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout（递归拉子模块）
+      - name: Checkout with submodules
         uses: actions/checkout@v4
         with:
           submodules: recursive
@@ -43,7 +43,7 @@ jobs:
 
       - name: Build Debug APK
         working-directory: Android/MaaFwApp
-        run: ./gradlew :app:assembleDebug
+        run: ./gradlew :app:assembleDebug --no-daemon
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
