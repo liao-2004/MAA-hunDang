@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793291252821,
+            "lastSyncTime": 1793361435247,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\事件逻辑.json",
             "savedViewport": {
-                "x": -977,
-                "y": -782,
-                "zoom": 0.8
+                "x": -390,
+                "y": -513,
+                "zoom": 0.7
             },
             "filename": "事件逻辑",
             "version": "v2.1.0"
@@ -19,8 +19,8 @@
     "$__mpe_external_地图场景_事件逻辑": {
         "$__mpe_code": {
             "position": {
-                "x": 2483,
-                "y": 890
+                "x": 2540,
+                "y": 811
             }
         }
     },
@@ -94,6 +94,7 @@
         "repeat_delay": 400,
         "next": [
             "战斗场景",
+            "游艺-点击空白关闭",
             "事件-失控书士"
         ],
         "$__mpe_code": {
@@ -378,7 +379,8 @@
         "repeat_delay": 600,
         "timeout": 1200,
         "next": [
-            "直接离开-红框"
+            "直接离开-红框",
+            "离开地点"
         ],
         "on_error": [
             "地图场景",
@@ -386,8 +388,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1627,
-                "y": 582
+                "x": 1552,
+                "y": 514
             }
         }
     },
@@ -605,8 +607,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2846,
-                "y": 1289
+                "x": 2824,
+                "y": 1308
             }
         }
     }
