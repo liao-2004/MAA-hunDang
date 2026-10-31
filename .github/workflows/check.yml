@@ -7,6 +7,7 @@ on:
     paths:
       - ".github/workflows/check.yml"
       - "assets/**"
+      - "maatools.config.mts"
       - "**.py"
   pull_request:
     branches:
@@ -14,6 +15,7 @@ on:
     paths:
       - ".github/workflows/check.yml"
       - "assets/**"
+      - "maatools.config.mts"
       - "**.py"
   workflow_dispatch:
 
