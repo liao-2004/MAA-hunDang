@@ -48,6 +48,8 @@ jobs:
 
       - name: Build debug APK
         working-directory: Android/MaaFwApp
+        env:
+          PI_PROFILE: ${{ github.workspace }}/pi-profile.yaml
         run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
 
       # 正式 release APK 需要先在 app/build.gradle.kts 配置签名（keystore），

@@ -1,0 +1,13 @@
+# MaaFwApp 打包配方：把本仓库 assets/ 作为 PI 资源打进 APK
+# 相对路径相对本文件所在目录；进包白名单 = 默认项 + config + MaaCommonAssets
+assets: ./assets
+
+include:
+  - interface.json
+  - resource/**
+  - config/**
+  - MaaCommonAssets/**
+  - data/**
+  - locales/**
+  - CONTACT
+  - LICENSE
