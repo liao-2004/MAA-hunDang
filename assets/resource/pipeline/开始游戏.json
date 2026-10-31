@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793297538310,
+            "lastSyncTime": 1793420372483,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\开始游戏.json",
             "savedViewport": {
-                "x": 33,
-                "y": 747,
-                "zoom": 0.75
+                "x": 846,
+                "y": 688,
+                "zoom": 0.65
             },
             "filename": "开始游戏",
             "version": "v2.1.0"
@@ -35,7 +35,6 @@
     "===开始===": {
         "timeout": 60000,
         "next": [
-            "启动游戏",
             "返回公告",
             "进入游戏",
             "启动祭坛",
@@ -43,8 +42,19 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -724,
-                "y": -716
+                "x": -805,
+                "y": -728
+            }
+        }
+    },
+    "==启动游戏==": {
+        "next": [
+            "目录进去"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -880,
+                "y": -947
             }
         }
     },
@@ -82,29 +92,6 @@
             "position": {
                 "x": 836,
                 "y": -632
-            }
-        }
-    },
-    "启动游戏": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "hzsj.png"
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "timeout": 80000,
-        "rate_limit": 3000,
-        "next": [
-            "返回公告",
-            "进入游戏"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -114,
-                "y": -174
             }
         }
     },
@@ -273,6 +260,21 @@
             "position": {
                 "x": 1158,
                 "y": -241
+            }
+        }
+    },
+    "目录进去": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.chillyroom.containerofsoul.yw"
+            }
+        },
+        "timeout": 8000,
+        "$__mpe_code": {
+            "position": {
+                "x": -536,
+                "y": -942
             }
         }
     },

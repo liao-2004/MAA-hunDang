@@ -20,7 +20,7 @@
             "name": "安卓端",
             "type": "Adb",
             "display_short_side": 720 // 默认缩放分辨率的短边长度
-        },
+        }
     ],
     "resource": [
         {
@@ -39,6 +39,13 @@
     // },
     "task": [
         {
+            "name": "==启动游戏==",
+            "entry": "==启动游戏==",
+            "group": [
+                "狂战士"
+            ]
+        },
+        {
             "name": "==开始游戏==",
             "entry": "===开始===",
             "controller": [
@@ -49,6 +56,9 @@
             ],
             "option": [
                 "永久VIP"
+            ],
+            "group": [
+                "狂战士"
             ]
         },
         {
@@ -77,7 +87,6 @@
                 },
                 "===开始===": {
                     "next": [
-                        "启动游戏",
                         "返回公告",
                         "进入游戏",
                         "前往观星室",
@@ -95,6 +104,16 @@
             ],
             "controller": [
                 "安卓端"
+            ],
+            "group": [
+                "狂战士"
+            ]
+        },
+        {
+            "name": "==退出游戏==",
+            "entry": "==退出游戏==",
+            "group": [
+                "狂战士"
             ]
         }
         // {
@@ -120,15 +139,32 @@
     "label": "深境",
     "option": {
         "永久VIP": {
-            "type": "checkbox",
             "cases": [
                 {
-                    "name": "默认"
+                    "name": "默认",
+                    "option": []
+                },
+                {
+                    "name": "新分支2",
+                    "option": []
                 }
             ],
-            "label": "永久VIP"
+            "label": "永久VIP",
+            "default_case": "默认",
+            "type": "switch",
+            "controller": [
+                "安卓端"
+            ],
+            "resource": [
+                "官服"
+            ]
         }
     },
+    "group": [
+        {
+            "name": "狂战士"
+        }
+    ],
     // "option": {
     //     "任务选项1": {
     //         "type": "select",

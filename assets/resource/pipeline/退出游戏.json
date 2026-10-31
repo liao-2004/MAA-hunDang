@@ -1,0 +1,29 @@
+{
+    "$__mpe_config_新建Pipeline2": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -764,
+                "y": 369,
+                "zoom": 0.86
+            },
+            "filename": "新建Pipeline2",
+            "version": "v2.1.0"
+        }
+    },
+    "==退出游戏==": {
+        "action": {
+            "type": "StopApp",
+            "param": {
+                "package": "com.chillyroom.containerofsoul.yw"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1621,
+                "y": -21
+            }
+        }
+    }
+}
