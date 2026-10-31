@@ -13,10 +13,12 @@ on:
       - "**"
     paths:
       - "Android/**"
+      - "assets/**"
       - ".github/workflows/build-apk.yml"
   pull_request:
     paths:
       - "Android/**"
+      - "assets/**"
       - ".github/workflows/build-apk.yml"
   workflow_dispatch:
 
