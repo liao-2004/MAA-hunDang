@@ -1,0 +1,58 @@
+name: build-apk
+
+# 触发条件：
+# - push 时如果改了 Android 子模块指针（gitlink）或本 workflow 文件
+# - PR 涉及上述路径
+# - 手动触发（Actions 页面点 Run workflow）
+# 注意：子模块里的代码改动要推到这个仓库，需要先在父仓库更新子模块指针：
+#   git add Android/MaaFwApp && git commit && git push
+
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "Android/**"
+      - ".github/workflows/build-apk.yml"
+  pull_request:
+    paths:
+      - "Android/**"
+      - ".github/workflows/build-apk.yml"
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Grant execute permission
+        run: chmod +x Android/MaaFwApp/gradlew
+
+      - name: Build debug APK
+        working-directory: Android/MaaFwApp
+        run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
+
+      # 正式 release APK 需要先在 app/build.gradle.kts 配置签名（keystore），
+      # 配置好后把下面注释打开，并把上传路径改成 release
+      # - name: Build release APK
+      #   working-directory: Android/MaaFwApp
+      #   run: ./gradlew :app:assembleRelease --no-daemon --stacktrace
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: MaaFwApp-debug-apk
+          path: Android/MaaFwApp/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error

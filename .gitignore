@@ -7,6 +7,9 @@ docs/.vuepress/.temp
 # Compiled Object files
 build
 build-*
+# 例外：workflow 文件（build-* 会误伤 build-apk.yml 之类的文件名）
+!.github/workflows/*.yml
+!.github/workflows/*.yaml
 *.slo
 *.lo
 *.o
