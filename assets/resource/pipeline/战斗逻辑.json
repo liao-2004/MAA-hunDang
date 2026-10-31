@@ -3,17 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793200343075,
+            "lastSyncTime": 1793206303758,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\战斗逻辑.json",
             "savedViewport": {
-                "x": -451,
-                "y": -53,
+                "x": 4,
+                "y": 105,
                 "zoom": 0.74
             },
             "filename": "战斗逻辑",
             "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_地图场景_战斗逻辑": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1851,
+                "y": 936
+            }
         }
     },
     "$__mpe_external_留下遗物_战斗逻辑": {
@@ -115,8 +123,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2008,
-                "y": 388
+                "x": 1815,
+                "y": 374
             }
         }
     },
@@ -391,8 +399,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1010,
-                "y": 177
+                "x": 1049,
+                "y": 230
             }
         }
     },
@@ -488,7 +496,8 @@
         "post_delay": 0,
         "timeout": 5000,
         "next": [
-            "结束消失"
+            "结束消失",
+            "源力消耗"
         ],
         "on_error": [
             "复活1",
@@ -497,8 +506,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 978,
-                "y": -84
+                "x": 977,
+                "y": -160
             }
         }
     },
@@ -530,8 +539,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 625,
-                "y": -108
+                "x": 615,
+                "y": -94
             }
         }
     },
@@ -566,7 +575,7 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 771,
+                "x": 752,
                 "y": 459
             }
         }
@@ -642,14 +651,6 @@
             "position": {
                 "x": 2342,
                 "y": 279
-            }
-        }
-    },
-    "$__mpe_external_地图场景_战斗逻辑": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1851,
-                "y": 936
             }
         }
     }
