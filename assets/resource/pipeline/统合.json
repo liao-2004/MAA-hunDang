@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1792946329708,
+            "lastSyncTime": 1793463512357,
             "isModifiedExternally": false,
             "isDeleted": false,
-            "filePath": "C:\\Users\\18111\\Desktop\\maah\\maah\\assets\\resource\\pipeline\\统合.json",
+            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\统合.json",
             "savedViewport": {
-                "x": -220,
-                "y": 157,
-                "zoom": 0.65
+                "x": -370,
+                "y": -76,
+                "zoom": 0.85
             },
             "filename": "统合",
             "version": "v2.1.0"
@@ -89,6 +89,21 @@
         }
     },
     "统合": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    445,
+                    236,
+                    298,
+                    192
+                ],
+                "template": [
+                    "统合.png"
+                ]
+            }
+        },
+        "inverse": false,
         "pre_delay": 0,
         "post_delay": 0,
         "timeout": -1,

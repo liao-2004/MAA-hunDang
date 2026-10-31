@@ -3,20 +3,44 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793420372483,
+            "lastSyncTime": 1793461238388,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\开始游戏.json",
             "savedViewport": {
-                "x": 846,
-                "y": 688,
-                "zoom": 0.65
+                "x": -214,
+                "y": 522,
+                "zoom": 0.66
             },
             "filename": "开始游戏",
             "version": "v2.1.0"
         }
     },
-    "$__mpe_external_离开地点_开始游戏": {
+    "$__mpe_external_事件逻辑_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": 103,
+                "y": -652
+            }
+        }
+    },
+    "$__mpe_external_地图场景_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": 104,
+                "y": -701
+            }
+        }
+    },
+    "$__mpe_external_战斗场景_开始游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": 109,
+                "y": -750
+            }
+        }
+    },
+    "$__mpe_external_离开地点2_开始游戏": {
         "$__mpe_code": {
             "position": {
                 "x": 1793,
@@ -24,26 +48,20 @@
             }
         }
     },
-    "$__mpe_external_统合_开始游戏": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1,
-                "y": -846
-            }
-        }
-    },
     "===开始===": {
-        "timeout": 60000,
+        "timeout": -1,
         "next": [
             "返回公告",
             "进入游戏",
             "启动祭坛",
-            "统合"
+            "战斗场景",
+            "地图场景",
+            "事件逻辑"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -805,
-                "y": -728
+                "x": -807,
+                "y": -705
             }
         }
     },
@@ -90,8 +108,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 836,
-                "y": -632
+                "x": 795,
+                "y": -653
             }
         }
     },
@@ -122,13 +140,13 @@
         },
         "rate_limit": 3000,
         "next": [
-            "启动祭坛",
-            "滑动难度"
+            "滑动难度",
+            "启动祭坛"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 703,
-                "y": -174
+                "y": -137
             }
         }
     },
@@ -162,7 +180,7 @@
         "timeout": -1,
         "focus": "开始游戏",
         "next": [
-            "离开地点",
+            "离开地点2",
             "坠入深境"
         ],
         "$__mpe_code": {
@@ -273,8 +291,8 @@
         "timeout": 8000,
         "$__mpe_code": {
             "position": {
-                "x": -536,
-                "y": -942
+                "x": -554,
+                "y": -960
             }
         }
     },
@@ -321,7 +339,10 @@
         "timeout": -1,
         "next": [
             "启动祭坛",
-            "进入游戏"
+            "进入游戏",
+            "战斗场景",
+            "地图场景",
+            "事件逻辑"
         ],
         "$__mpe_code": {
             "position": {
