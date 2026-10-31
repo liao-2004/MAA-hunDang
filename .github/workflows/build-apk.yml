@@ -42,8 +42,11 @@ jobs:
 
       # MaaFramework 的 .so 内核不在仓库里，必须先用脚本从 GitHub Release 铺进
       # app/src/main/jniLibs/<abi>/，否则 APK 是空壳（装上加载 native 失败）
+      # GITHUB_TOKEN 避免匿名请求触发 API 限流（403 rate limit exceeded）
       - name: Setup MaaFramework native libs
         working-directory: Android/MaaFwApp
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/setup_maa_framework.py
 
       - name: Build debug APK
