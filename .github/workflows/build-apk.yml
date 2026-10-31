@@ -40,6 +40,12 @@ jobs:
       - name: Grant execute permission
         run: chmod +x Android/MaaFwApp/gradlew
 
+      # MaaFramework 的 .so 内核不在仓库里，必须先用脚本从 GitHub Release 铺进
+      # app/src/main/jniLibs/<abi>/，否则 APK 是空壳（装上加载 native 失败）
+      - name: Setup MaaFramework native libs
+        working-directory: Android/MaaFwApp
+        run: python scripts/setup_maa_framework.py
+
       - name: Build debug APK
         working-directory: Android/MaaFwApp
         run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
