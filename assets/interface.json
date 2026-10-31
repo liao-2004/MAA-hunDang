@@ -141,16 +141,16 @@
         "永久VIP": {
             "cases": [
                 {
-                    "name": "默认",
+                    "name": "Yes",
                     "option": []
                 },
                 {
-                    "name": "新分支2",
+                    "name": "No",
                     "option": []
                 }
             ],
             "label": "永久VIP",
-            "default_case": "默认",
+            "default_case": "Yes",
             "type": "switch",
             "controller": [
                 "安卓端"
