@@ -24,18 +24,18 @@ jobs:
   build-apk:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           submodules: true
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: "17"
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: Grant execute permission
         run: chmod +x Android/MaaFwApp/gradlew
@@ -51,7 +51,7 @@ jobs:
       #   run: ./gradlew :app:assembleRelease --no-daemon --stacktrace
 
       - name: Upload debug APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: MaaFwApp-debug-apk
           path: Android/MaaFwApp/app/build/outputs/apk/debug/*.apk
