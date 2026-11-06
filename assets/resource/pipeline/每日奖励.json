@@ -28,6 +28,7 @@
             }
         },
         "next": [
+            "任务一_检测数值小于100",
             "不足80的任务刷新_任务一",
             "任务二",
             "任务三",
@@ -37,6 +38,59 @@
             "position": {
                 "x": 1547,
                 "y": -632
+            }
+        }
+    },
+    "任务一_检测数值小于100": {
+        "recognition": {
+            "type": "Custom",
+            "param": {
+                "custom_recognition": "value_less_than",
+                "custom_recognition_param": {
+                    "roi": [
+                        334,
+                        354,
+                        65,
+                        36
+                    ],
+                    "threshold": 100,
+                    "only_rec": true
+                }
+            }
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "click_and_notify",
+                "custom_action_param": {
+                    "target": [
+                        210,
+                        211
+                    ],
+                    "message": "任务一：数值 {value} 小于 {threshold}，已点击刷新"
+                }
+            }
+        },
+        "post_delay": 500,
+        "focus": {
+            "Node.Recognition.Succeeded": {
+                "content": "任务一：检测到数值小于 100，正在点击刷新",
+                "display": [
+                    "log",
+                    "toast"
+                ]
+            }
+        },
+        "next": [
+            "不足80的任务刷新_任务一",
+            "任务二",
+            "任务三",
+            "离开任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1900,
+                "y": -900
             }
         }
     },
@@ -98,6 +152,7 @@
             }
         },
         "next": [
+            "任务二_检测数值小于100",
             "不足80的任务刷新_任务二",
             "任务三",
             "离开任务"
@@ -106,6 +161,58 @@
             "position": {
                 "x": 1498,
                 "y": -400
+            }
+        }
+    },
+    "任务二_检测数值小于100": {
+        "recognition": {
+            "type": "Custom",
+            "param": {
+                "custom_recognition": "value_less_than",
+                "custom_recognition_param": {
+                    "roi": [
+                        648,
+                        357,
+                        49,
+                        30
+                    ],
+                    "threshold": 100,
+                    "only_rec": true
+                }
+            }
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "click_and_notify",
+                "custom_action_param": {
+                    "target": [
+                        524,
+                        214
+                    ],
+                    "message": "任务二：数值 {value} 小于 {threshold}，已点击刷新"
+                }
+            }
+        },
+        "post_delay": 500,
+        "focus": {
+            "Node.Recognition.Succeeded": {
+                "content": "任务二：检测到数值小于 100，正在点击刷新",
+                "display": [
+                    "log",
+                    "toast"
+                ]
+            }
+        },
+        "next": [
+            "不足80的任务刷新_任务二",
+            "任务三",
+            "离开任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1900,
+                "y": -560
             }
         }
     },
@@ -166,6 +273,7 @@
             }
         },
         "next": [
+            "任务三_检测数值小于100",
             "不足80的任务刷新_任务三",
             "离开任务"
         ],
@@ -173,6 +281,57 @@
             "position": {
                 "x": 1550,
                 "y": -127
+            }
+        }
+    },
+    "任务三_检测数值小于100": {
+        "recognition": {
+            "type": "Custom",
+            "param": {
+                "custom_recognition": "value_less_than",
+                "custom_recognition_param": {
+                    "roi": [
+                        957,
+                        359,
+                        49,
+                        29
+                    ],
+                    "threshold": 100,
+                    "only_rec": true
+                }
+            }
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "click_and_notify",
+                "custom_action_param": {
+                    "target": [
+                        833,
+                        216
+                    ],
+                    "message": "任务三：数值 {value} 小于 {threshold}，已点击刷新"
+                }
+            }
+        },
+        "post_delay": 500,
+        "focus": {
+            "Node.Recognition.Succeeded": {
+                "content": "任务三：检测到数值小于 100，正在点击刷新",
+                "display": [
+                    "log",
+                    "toast"
+                ]
+            }
+        },
+        "next": [
+            "不足80的任务刷新_任务三",
+            "离开任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1900,
+                "y": 30
             }
         }
     },
