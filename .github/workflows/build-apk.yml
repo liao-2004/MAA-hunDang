@@ -96,9 +96,9 @@ jobs:
           # AGP 默认 debug 签名配置认的口径：alias androiddebugkey，口令 android
           keytool -list -keystore "$HOME/.android/debug.keystore" -storepass android \
             -alias androiddebugkey > /dev/null
+          # 不按标签解析：去掉冒号后取第一段 64 位十六进制，keytool 的 SHA256 行必然命中
           KS_SHA=$(keytool -list -v -keystore "$HOME/.android/debug.keystore" -storepass android \
-            -alias androiddebugkey | awk -F': ' '/SHA256:/ {print $2; exit}' \
-            | tr -d ':' | tr 'A-F' 'a-f' | xargs)
+            -alias androiddebugkey | tr -d ':' | grep -oE '[0-9a-fA-F]{64}' | head -n1 | tr 'A-F' 'a-f')
           echo "已还原固定 debug keystore，证书 SHA-256: $KS_SHA"
           # 把本次签名身份的指纹留在文件里，后面的校验步骤以它为准（只需一个 Secret 即可自校验）
           printf '%s' "$KS_SHA" > "${RUNNER_TEMP}/expected_sha256.txt"
@@ -124,9 +124,11 @@ jobs:
           set -euo pipefail
           APK=$(find app/build/outputs/apk/debug -name "*.apk" | head -n1)
           APKSIGNER=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -n1)
-          ACTUAL=$("$APKSIGNER" verify --print-certs "$APK" \
-            | awk -F': ' '/SHA-256 digest/ {print $2; exit}' | tr -d ':' | tr 'A-F' 'a-f' | xargs)
-          echo "APK 签名证书 SHA-256: $ACTUAL"
+          # 不按 «标签: 值» 解析（apksigner 的输出格式各版本不同，按字段取会拿到标签文本）：
+          # 去掉冒号后取第一段 64 位十六进制即为证书 SHA-256，SHA-1 只有 40 位不会误中
+          ACTUAL=$("$APKSIGNER" verify --print-certs "$APK" 2>&1 \
+            | tr -d ':' | grep -oE '[0-9a-fA-F]{64}' | head -n1 | tr 'A-F' 'a-f')
+          echo "APK 签名证书 SHA-256: ${ACTUAL:-<空>}"
           # 期望值取「本次还原进 runner 的那张 keystore」的证书指纹，所以不需要第二个 Secret
           EXPECTED_FILE="${RUNNER_TEMP}/expected_sha256.txt"
           if [ ! -s "$EXPECTED_FILE" ]; then
@@ -135,11 +137,13 @@ jobs:
           fi
           EXPECTED=$(tr -d '[:space:]' < "$EXPECTED_FILE")
           if [ -z "$ACTUAL" ]; then
-            echo "::error::读不到 APK 的签名证书，APK 可能根本没有被签名"
+            RAW=$("$APKSIGNER" verify --print-certs "$APK" 2>&1 | tr '\n' '|' | head -c 400)
+            echo "::error::读不到 APK 的签名证书指纹。apksigner 原始输出: ${RAW}"
             exit 1
           fi
           if [ "$ACTUAL" != "$EXPECTED" ]; then
-            echo "::error::APK 签名与固定密钥不一致（actual=$ACTUAL expected=$EXPECTED）——AGP 没有使用 ~/.android/debug.keystore，用户会装不上更新"
+            RAW=$("$APKSIGNER" verify --print-certs "$APK" 2>&1 | tr '\n' '|' | head -c 400)
+            echo "::error::APK 签名与固定密钥不一致（actual=$ACTUAL expected=$EXPECTED）——AGP 没有使用 ~/.android/debug.keystore。apksigner: ${RAW}"
             exit 1
           fi
           echo "签名与固定密钥一致，可以覆盖安装"
@@ -203,7 +207,8 @@ jobs:
 
           PC版: [Windows x86_64 (.zip)](https://gh-proxy.com/${BASE}/${ZIP_NAME})
 
-          ### 注: v5.x.x 版本皆为前瞻版、性能较大
+          ### 注: 
+          ###     v5.x.x 版本皆为前瞻版、性能较大
           ###     v1.x.x 版本皆为测试版、不建议下载
 
           EOF
