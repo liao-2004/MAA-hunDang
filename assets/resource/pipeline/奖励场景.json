@@ -3,17 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793900229961,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "C:\\Users\\18111\\Desktop\\maah\\MAA-hunDang\\assets\\resource\\pipeline\\奖励场景.json",
             "savedViewport": {
-                "x": -724,
-                "y": 169,
-                "zoom": 0.49
+                "x": -2002,
+                "y": 92,
+                "zoom": 0.8
             },
             "filename": "奖励场景",
-            "version": "v2.1.0"
+            "version": "v2.1.1"
         }
     },
     "$__mpe_external_战斗场景_奖励场景": {
@@ -333,8 +329,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2382,
-                "y": 504
+                "x": 2367,
+                "y": 483
             }
         }
     },
@@ -441,6 +437,7 @@
                 ]
             }
         },
+        "pre_delay": 0,
         "action": {
             "type": "Click",
             "param": {
@@ -452,6 +449,7 @@
                 ]
             }
         },
+        "post_delay": 0,
         "next": [
             "祝福奖励_确认"
         ],
@@ -477,9 +475,11 @@
                 ]
             }
         },
+        "pre_delay": 0,
         "action": {
             "type": "Click"
         },
+        "post_delay": 0,
         "next": [
             "奖励_点击空白处确认",
             "奖励_选择卡牌",
@@ -487,8 +487,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2969,
-                "y": 346
+                "x": 2909,
+                "y": 348
             }
         }
     }
