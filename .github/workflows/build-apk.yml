@@ -123,6 +123,9 @@ jobs:
           }
           echo "候选 debug 密钥位置:"
           install_keystore "$HOME/.android"
+          # 真凶：AGP 9 读的是 XDG 目录 ~/.config/.android/debug.keystore（实测取证见下个步骤的注解），
+          # 传统 $HOME/.android 那张它根本不看
+          install_keystore "${XDG_CONFIG_HOME:-$HOME/.config}/.android"
           if [ -n "${ANDROID_USER_HOME:-}" ]; then install_keystore "$ANDROID_USER_HOME"; fi
           if [ -n "${ANDROID_SDK_HOME:-}" ]; then install_keystore "$ANDROID_SDK_HOME/.android"; fi
           if [ -n "${ANDROID_HOME:-}" ]; then install_keystore "$ANDROID_HOME/.android"; fi
