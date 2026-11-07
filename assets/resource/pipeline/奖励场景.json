@@ -4,66 +4,176 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -2002,
-                "y": 92,
+                "x": -1848,
+                "y": 78,
                 "zoom": 0.8
             },
             "filename": "奖励场景",
             "version": "v2.1.1"
         }
     },
+    "$__mpe_external_前往主仪式间_奖励场景": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4379,
+                "y": 378
+            }
+        }
+    },
+    "$__mpe_external_开始游戏_点空白处关闭_奖励场景": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4341,
+                "y": 534
+            }
+        }
+    },
     "$__mpe_external_战斗场景_奖励场景": {
         "$__mpe_code": {
             "position": {
-                "x": 2708,
-                "y": 1038
+                "x": 2804,
+                "y": -66
             }
         }
     },
-    "$__mpe_external_游艺事件_奖励场景": {
-        "$__mpe_code": {
-            "position": {
-                "x": 2716,
-                "y": 925
-            }
-        }
-    },
-    "$__mpe_external_离开地点_动作_奖励场景": {
-        "$__mpe_code": {
-            "position": {
-                "x": 3527,
-                "y": 722
-            }
-        }
-    },
-    "$__mpe_external_离开地点_直接_奖励场景": {
-        "$__mpe_code": {
-            "position": {
-                "x": 2731,
-                "y": 802
-            }
-        }
-    },
-    "$__mpe_external_锻造场景_奖励场景": {
-        "$__mpe_code": {
-            "position": {
-                "x": 2736,
-                "y": 726
-            }
-        }
-    },
-    "奖励_点击空白处确认": {
+    "点击空白关闭": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    540,
-                    655,
-                    198,
-                    48
+                    474,
+                    639,
+                    339,
+                    75
                 ],
                 "template": [
-                    "游艺/游艺-领取并离开.png"
+                    "结算逻辑/点击空白关闭.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 3,
+        "repeat_delay": 400,
+        "post_delay": 1000,
+        "timeout": -1,
+        "next": [
+            "结束探索",
+            "点击空白关闭",
+            "前往主仪式间",
+            "开始游戏_点空白处关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3671,
+                "y": 575
+            }
+        }
+    },
+    "留下遗物": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    354,
+                    557,
+                    241,
+                    70
+                ],
+                "template": [
+                    "结算逻辑/遗物.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "next": [
+            "继续",
+            "点击空白关闭",
+            "结束探索"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3203,
+                "y": 117
+            }
+        }
+    },
+    "终结": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "结算逻辑/终结.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 3,
+        "repeat_delay": 300,
+        "next": [
+            "留下遗物",
+            "继续",
+            "黑屏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2491,
+                "y": 281
+            }
+        }
+    },
+    "结束探索": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1020,
+                    34,
+                    241,
+                    79
+                ],
+                "template": [
+                    "结算逻辑/结束探索.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 7000,
+        "timeout": -1,
+        "focus": "游戏结束",
+        "next": [
+            "前往主仪式间",
+            "点击空白关闭",
+            "结束探索",
+            "开始游戏_点空白处关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4015,
+                "y": 135
+            }
+        }
+    },
+    "继续": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    996,
+                    29,
+                    268,
+                    73
+                ],
+                "template": [
+                    "结算逻辑/继续.png"
                 ]
             }
         },
@@ -71,424 +181,66 @@
             "type": "Click"
         },
         "next": [
-            "祝福奖励",
-            "离开地点_动作"
+            "点击空白关闭",
+            "结束探索"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3269,
-                "y": 368
+                "x": 3257,
+                "y": 660
             }
         }
     },
-    "奖励_确认": {
+    "黑屏": {
         "action": {
             "type": "Click",
             "param": {
                 "target": [
-                    922,
-                    660,
-                    16,
-                    7
+                    886,
+                    346,
+                    75,
+                    41
                 ]
             }
         },
+        "repeat": 3,
+        "repeat_delay": 500,
         "next": [
-            "奖励_选择卡牌_副本1",
-            "奖励_点击空白处确认"
+            "留下遗物",
+            "继续",
+            "点击空白关闭"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3440,
-                "y": -31
+                "x": 2790,
+                "y": 594
             }
         }
     },
-    "奖励_确认2": {
+    "黑终结": {
         "action": {
             "type": "Click",
             "param": {
                 "target": [
-                    922,
-                    660,
-                    16,
-                    7
+                    683,
+                    299,
+                    30,
+                    21
                 ]
             }
         },
+        "repeat": 2,
+        "repeat_delay": 400,
+        "focus": "成就：遇到了百战克星",
         "next": [
-            "奖励_选择卡牌_副本1_副本1",
-            "奖励_点击空白处确认"
+            "继续",
+            "战斗场景",
+            "留下遗物"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4201,
-                "y": 36
-            }
-        }
-    },
-    "奖励_确认2_副本1": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    922,
-                    660,
-                    16,
-                    7
-                ]
-            }
-        },
-        "next": [
-            "奖励_选择卡牌_副本1_副本1_副本1",
-            "奖励_点击空白处确认"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4211,
-                "y": 279
-            }
-        }
-    },
-    "奖励_确认2_副本1_副本1": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1104,
-                    202,
-                    9,
-                    18
-                ]
-            }
-        },
-        "next": [
-            "奖励_点击空白处确认"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4270,
-                "y": 502
-            }
-        }
-    },
-    "奖励_选择卡牌": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    836,
-                    17,
-                    189,
-                    47
-                ],
-                "template": [
-                    "事件逻辑/选择卡牌.png"
-                ]
-            }
-        },
-        "next": [
-            "新建节点62"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2920,
-                "y": -49
-            }
-        }
-    },
-    "奖励_选择卡牌_副本1": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    836,
-                    17,
-                    189,
-                    47
-                ],
-                "template": [
-                    "事件逻辑/选择卡牌.png"
-                ]
-            }
-        },
-        "next": [
-            "新建节点62_副本1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3687,
-                "y": 20
-            }
-        }
-    },
-    "奖励_选择卡牌_副本1_副本1": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    836,
-                    17,
-                    189,
-                    47
-                ],
-                "template": [
-                    "事件逻辑/选择卡牌.png"
-                ]
-            }
-        },
-        "next": [
-            "新建节点62_副本1_副本1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3679,
-                "y": 271
-            }
-        }
-    },
-    "奖励_选择卡牌_副本1_副本1_副本1": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    836,
-                    17,
-                    189,
-                    47
-                ],
-                "template": [
-                    "事件逻辑/选择卡牌.png"
-                ]
-            }
-        },
-        "next": [
-            "新建节点62_副本1_副本1_副本1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3726,
-                "y": 487
-            }
-        }
-    },
-    "奖励事件": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    97,
-                    290,
-                    57,
-                    373
-                ],
-                "template": [
-                    "奖励事件判断.png"
-                ],
-                "threshold": [
-                    0.75
-                ]
-            }
-        },
-        "timeout": 4000,
-        "next": [
-            "锻造场景",
-            "离开地点_直接",
-            "游艺事件"
-        ],
-        "on_error": [
-            "战斗场景"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2330,
-                "y": 781
-            }
-        }
-    },
-    "奖励场景": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    515,
-                    98,
-                    266,
-                    98
-                ],
-                "template": [
-                    "奖励-战斗胜利.png"
-                ]
-            }
-        },
-        "pre_delay": 0,
-        "post_delay": 0,
-        "next": [
-            "祝福奖励",
-            "离开地点_动作"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2367,
-                "y": 483
-            }
-        }
-    },
-    "新建节点62": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    832,
-                    215,
-                    13,
-                    13
-                ]
-            }
-        },
-        "next": [
-            "奖励_确认"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3190,
-                "y": -41
-            }
-        }
-    },
-    "新建节点62_副本1": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1010,
-                    208,
-                    11,
-                    16
-                ]
-            }
-        },
-        "next": [
-            "奖励_确认2"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3944,
-                "y": 33
-            }
-        }
-    },
-    "新建节点62_副本1_副本1": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    746,
-                    204,
-                    11,
-                    20
-                ]
-            }
-        },
-        "next": [
-            "奖励_确认2_副本1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3941,
-                "y": 272
-            }
-        }
-    },
-    "新建节点62_副本1_副本1_副本1": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    746,
-                    204,
-                    11,
-                    20
-                ]
-            }
-        },
-        "next": [
-            "奖励_确认2_副本1_副本1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3996,
-                "y": 499
-            }
-        }
-    },
-    "祝福奖励": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    279,
-                    386,
-                    753,
-                    33
-                ],
-                "template": [
-                    "奖励事件/祝福奖励.png"
-                ]
-            }
-        },
-        "pre_delay": 0,
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    -3,
-                    51,
-                    2,
-                    -6
-                ]
-            }
-        },
-        "post_delay": 0,
-        "next": [
-            "祝福奖励_确认"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2660,
-                "y": 345
-            }
-        }
-    },
-    "祝福奖励_确认": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    576,
-                    545,
-                    135,
-                    45
-                ],
-                "template": [
-                    "奖励事件/祝福奖励_确认.png"
-                ]
-            }
-        },
-        "pre_delay": 0,
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 0,
-        "next": [
-            "奖励_点击空白处确认",
-            "奖励_选择卡牌",
-            "祝福奖励"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2909,
-                "y": 348
+                "x": 2386,
+                "y": -61
             }
         }
     }
