@@ -91,26 +91,34 @@ jobs:
             echo "::error::ANDROID_DEBUG_KEYSTORE_BASE64 未配置：签名无法固定，本次会产出「装不上」的包。请在仓库 Settings → Secrets → Actions 里添加该 Secret，值取 MHD-ci-signing/debug.keystore.base64.txt 的整行内容后重跑。"
             exit 1
           fi
-          mkdir -p "$HOME/.android"
-          printf '%s' "$DEBUG_KEYSTORE_BASE64" | base64 -d > "$HOME/.android/debug.keystore"
-          # AGP 默认 debug 签名配置认的口径：alias androiddebugkey，口令 android
-          keytool -list -keystore "$HOME/.android/debug.keystore" -storepass android \
-            -alias androiddebugkey > /dev/null
+          P12="${RUNNER_TEMP}/fixed-debug.p12"
+          printf '%s' "$DEBUG_KEYSTORE_BASE64" | base64 -d > "$P12"
+          # Secret 里存的是 PKCS12；AGP 的 debug 签名配置按 JKS 口径读取，这里就地转换容器格式。
+          # 只换壳：密钥对、证书、alias 全不变，所以证书指纹仍是同一串
+          KS="${RUNNER_TEMP}/debug-jks.keystore"
+          rm -f "$KS"
+          keytool -importkeystore -noprompt \
+            -srckeystore "$P12" -srcstoretype PKCS12 -srcstorepass android \
+            -destkeystore "$KS" -deststoretype JKS -deststorepass android -destkeypass android \
+            > /dev/null
+          keytool -list -keystore "$KS" -storepass android -alias androiddebugkey > /dev/null
           # 不按标签解析：去掉冒号后取第一段 64 位十六进制，keytool 的 SHA256 行必然命中
-          KS_SHA=$(keytool -list -v -keystore "$HOME/.android/debug.keystore" -storepass android \
-            -alias androiddebugkey | tr -d ':' | grep -oE '[0-9a-fA-F]{64}' | head -n1 | tr 'A-F' 'a-f')
-          echo "已还原固定 debug keystore，证书 SHA-256: $KS_SHA"
+          KS_SHA=$(keytool -list -v -keystore "$KS" -storepass android -alias androiddebugkey \
+            | tr -d ':' | grep -oE '[0-9a-fA-F]{64}' | head -n1 | tr 'A-F' 'a-f')
+          echo "已准备好固定 debug keystore（JKS），证书 SHA-256: $KS_SHA"
+          if [ "$KS_SHA" != "8cbdd603768b30f78dfb19108172043c07dd00459d8e207073e7ebbf6ba1b20d" ]; then
+            echo "::error::Secret 里那把钥匙的证书指纹是 $KS_SHA，与预期的 8cbdd603…b20d 不一致"
+            exit 1
+          fi
           # AGP 9 实际读取的 debug 密钥位置和 ANDROID_* 环境变量强相关（实测 $HOME/.android 没被用上），
-          # 所以把同一张证书铺到几个候选目录；下一行为真凭实据：构建后会打印到底用了哪个文件
+          # 所以把同一张证书铺到几个候选目录；下一个步骤会打印构建后到底用了哪个文件
           install_keystore() {
             dst="$1"
             [ -n "$dst" ] || return 0
+            rm -f "$dst/debug.keystore" 2>/dev/null || true
             mkdir -p "$dst" 2>/dev/null || sudo mkdir -p "$dst" 2>/dev/null || return 0
-            cp "$HOME/.android/debug.keystore" "$dst/debug.keystore" 2>/dev/null \
-              || sudo cp "$HOME/.android/debug.keystore" "$dst/debug.keystore" 2>/dev/null || true
-            if [ -f "$dst/debug.keystore" ] && [ ! -r "$dst/debug.keystore" ]; then
-              sudo chmod 644 "$dst/debug.keystore" 2>/dev/null || true
-            fi
+            cp "$KS" "$dst/debug.keystore" 2>/dev/null \
+              || sudo cp "$KS" "$dst/debug.keystore" 2>/dev/null || true
             echo "  keystore -> $dst/debug.keystore"
           }
           echo "候选 debug 密钥位置:"
@@ -136,20 +144,20 @@ jobs:
           PI_PROFILE: ${{ github.workspace }}/pi-profile.yaml
         run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
 
-      # 取证步骤：打印所有 debug.keystore 及其证书指纹，用来确认 AGP 到底读了哪一个
+      # 取证步骤：把环境变量与所有 debug.keystore 的证书指纹打进注解，用于确认 AGP 到底读了哪一个
       - name: Diagnose debug keystore actually used
+        if: always()
         run: |
           set -uo pipefail
-          echo "== ANDROID 相关环境变量 =="
-          env | grep -E '^(ANDROID_HOME|ANDROID_SDK_ROOT|ANDROID_SDK_HOME|ANDROID_USER_HOME)=' || echo "（无）"
-          echo "HOME=$HOME"
-          echo "GRADLE_USER_HOME=${GRADLE_USER_HOME:-<未设置>}"
-          echo "== 找到的 debug.keystore =="
+          DIAG=" | ENV: $(env | grep -E '^(ANDROID_HOME|ANDROID_SDK_ROOT|ANDROID_SDK_HOME|ANDROID_USER_HOME)=' | tr '\n' ' ')"
+          DIAG="$DIAG | HOME=$HOME"
           for f in $(find "$HOME" /usr/local/lib/android -name "debug.keystore" 2>/dev/null | grep -v '/\.git/' | sort -u); do
             sha=$(keytool -list -v -keystore "$f" -storepass android -alias androiddebugkey 2>/dev/null \
               | tr -d ':' | grep -oE '[0-9a-fA-F]{64}' | head -n1 | tr 'A-F' 'a-f' || true)
-            echo "  $f => ${sha:-<读不出，别名或口令不符>}"
+            DIAG="$DIAG | $f => ${sha:-读不出}"
           done
+          echo "$DIAG"
+          echo "::notice::DIAG$DIAG"
 
       # 签名没生效的话，用户又要卸载重装，而 CI 照样是绿的 —— 这里把它变成红灯
       - name: Verify APK signature matches the fixed key
