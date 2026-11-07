@@ -73,11 +73,55 @@ jobs:
       - name: Patch default update source to GitHub
         run: python tools/patch_maafw_update_source.py
 
+      # 关键：固定 debug 签名，解决「每次更新都得先卸载旧版」。
+      # GitHub 托管 runner 每次都是全新机器，AGP 找不到 ~/.android/debug.keystore 时会
+      # 就地生成一把随机密钥，于是同版本两次构建的证书都不同（Android 只允许同签名覆盖安装，
+      # 签名不一致就报 INSTALL_FAILED_UPDATE_INCOMPATIBLE，只能卸载重装）。
+      # 这里把仓库固定的一张调试证书还原到 runner 的默认路径，让每次构建都签同一张证书。
+      # 密钥存 GitHub Secret（base64），不进仓库；没配时只告警不红，避免 CI 直接断掉。
+      - name: Restore fixed debug keystore
+        env:
+          DEBUG_KEYSTORE_BASE64: ${{ secrets.ANDROID_DEBUG_KEYSTORE_BASE64 }}
+        run: |
+          set -euo pipefail
+          if [ -z "${DEBUG_KEYSTORE_BASE64:-}" ]; then
+            echo "::warning::ANDROID_DEBUG_KEYSTORE_BASE64 未配置，本次将退回 AGP 随机 debug 签名，产出的 APK 无法覆盖安装旧版"
+            exit 0
+          fi
+          mkdir -p "$HOME/.android"
+          printf '%s' "$DEBUG_KEYSTORE_BASE64" | base64 -d > "$HOME/.android/debug.keystore"
+          # AGP 默认 debug 签名配置认的口径：alias androiddebugkey，口令 android
+          keytool -list -keystore "$HOME/.android/debug.keystore" -storepass android \
+            -alias androiddebugkey > /dev/null
+          echo "已还原固定 debug keystore"
+
       - name: Build debug APK
         working-directory: Android/MaaFwApp
         env:
           PI_PROFILE: ${{ github.workspace }}/pi-profile.yaml
         run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
+
+      # 签名没生效的话，用户又要卸载重装，而 CI 照样是绿的 —— 这里把它变成红灯
+      - name: Verify APK signature matches the fixed key
+        working-directory: Android/MaaFwApp
+        env:
+          EXPECTED_SHA256: ${{ secrets.ANDROID_DEBUG_KEYSTORE_SHA256 }}
+        run: |
+          set -euo pipefail
+          APK=$(find app/build/outputs/apk/debug -name "*.apk" | head -n1)
+          APKSIGNER=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -n1)
+          ACTUAL=$("$APKSIGNER" verify --print-certs "$APK" \
+            | awk -F': ' '/SHA-256 digest/ {print $2; exit}' | tr -d ':' | tr 'A-F' 'a-f' | xargs)
+          echo "APK 签名证书 SHA-256: $ACTUAL"
+          if [ -z "${EXPECTED_SHA256:-}" ]; then
+            echo "::warning::ANDROID_DEBUG_KEYSTORE_SHA256 未配置，只打印不校验"
+            exit 0
+          fi
+          EXPECTED=$(printf '%s' "$EXPECTED_SHA256" | tr -d ':' | tr 'A-F' 'a-f' | xargs)
+          if [ "$ACTUAL" != "$EXPECTED" ]; then
+            echo "::error::APK 签名与固定密钥不一致（actual=$ACTUAL expected=$EXPECTED），用户会装不上更新"
+            exit 1
+          fi
 
       # 正式 release APK 需要先在 app/build.gradle.kts 配置签名（keystore），
       # 配置好后把下面注释打开，并把上传路径改成 release
@@ -114,7 +158,11 @@ jobs:
           APK=$(find apk -name "*.apk" | head -n1 || true)
           TAG="${{ github.event.release.tag_name || github.ref_name }}"
           DATE=$(date +%Y%m%d)
-          APK_NAME="MAA-hunDang-debug-${TAG}-${DATE}.apk"
+          # 文件名里不再带构建日期：这个包不带任何 ABI 标记，应用内更新器按「无标记的
+          # 唯一 apk 才算 universal」挑包（MaaFwApp GitHubUpdate.selectAsset 用的是
+          # singleOrNull），同一 Release 里出现两个这样的包会判成查不到安装包，
+          # 用户就只能手动下载 —— 再撞上签名冲突，就得先卸载。一个 Release 只留一个 apk。
+          APK_NAME="MAA-hunDang-debug-${TAG}.apk"
           cp "$APK" "release_assets/${APK_NAME}"
           ls -lh release_assets/
 
@@ -134,9 +182,24 @@ jobs:
 
           PC版: [Windows x86_64 (.zip)](https://gh-proxy.com/${BASE}/${ZIP_NAME})
 
-          ### 注: v5.x.x 、v1.x.x 版本的皆为测试版、不建议下载
+          ### 注: v5.x.x 版本皆为前瞻版、性能较大
+          ###     v1.x.x 版本皆为测试版、不建议下载
 
           EOF
+
+      # 同一个 tag 可能被多次触发（tag push 与 release published 各来一轮），
+      # 先清掉这个 Release 上已有的 apk 资产，避免重跑时留下同名/多份安装包
+      - name: Drop stale APK assets from this release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ github.event.release.tag_name || github.ref_name }}"
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets \
+            --jq '.assets[].name' 2>/dev/null | grep -E '^MAA-hunDang-.*\.apk$' | while read -r name; do
+              echo "移除旧资产: $name"
+              gh release delete-asset "$TAG" "$name" --yes --repo "$GITHUB_REPOSITORY" || true
+            done || true
 
       - name: Upload APK to release
         uses: softprops/action-gh-release@v2
